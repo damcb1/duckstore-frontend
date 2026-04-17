@@ -1,0 +1,197 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f1e8;
+  font-family: system-ui, sans-serif;
+  color: #222;
+}
+
+/* APP CONTAINER */
+.app {
+  max-width: 420px;
+  margin: auto;
+  background: #f5f1e8;
+  padding-bottom: 80px;
+}
+
+/* LABEL */
+.label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #9a8f7a;
+  text-transform: uppercase;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.hero p {
+  font-size: 14px;
+  color: #6d6d6d;
+}
+
+/* BUTTON */
+.btn.primary {
+  display: inline-block;
+  background: #f4c400;
+  color: #000;
+  padding: 12px 20px;
+  border-radius: 30px;
+  margin-top: 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link {
+  display: block;
+  margin-top: 10px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* HERO IMAGE */
+.hero-image {
+  margin-top: 20px;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* MISSION */
+.mission {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.mission h2 {
+  margin: 10px 0;
+}
+
+.quote {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* FEATURES */
+.feature {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.icon {
+  background: #e6f0ff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PRODUCTS */
+.products {
+  padding: 30px 20px;
+}
+
+.products h3 {
+  margin-bottom: 5px;
+}
+
+.sub {
+  font-size: 13px;
+  color: #777;
+}
+
+/* CARDS */
+.cards {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: #f7d84a;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  font-size: 14px;
+}
+
+.card span {
+  font-size: 13px;
+}
+
+/* CTA */
+.cta {
+  background: #f4c400;
+  margin: 20px;
+  padding: 25px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.form {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+
+.form button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+/* NAVBAR */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 420px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+}
