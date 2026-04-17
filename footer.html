@@ -1,17 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Footer</title>
+
+<style>
+/* =========================
+   BASE
+========================= */
+body{
+  margin:0;
+  background:#ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   NAV
+========================= */
+.bottom-nav{
+  position:fixed;
+  bottom:16px;
+  left:50%;
+  transform:translateX(-50%);
+  width:calc(100% - 24px);
+  max-width:420px;
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+  background:#ffffff;
+  border-radius:18px;
+  
+  font-family: 'Liberation Sans', sans-serif , monospace;
+}
+
+/* =========================
+   ITEM
+========================= */
+.tab{
+  flex:1;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  border:none;
+  background:transparent;
+
+  font-size:10px;
+  color:#A16207;
+}
+
+/* =========================
+   ICON (FORZADO VISIBLE)
+========================= */
+.icon{
+  width:28px;
+  height:28px;
+
+  fill:#3D3905;   /* IMPORTANTE: ahora es fill, no stroke */
+}
+
+/* active */
+.tab.active .icon{
+  fill:#0068A8;
+}
+</style>
+
+</head>
+
+<body>
+
 <nav class="bottom-nav">
-  <div class="nav-item active">
-    <i data-lucide="home"></i>
-  </div>
 
-  <div class="nav-item">
-    <i data-lucide="shopping-bag"></i>
-  </div>
+  <button class="tab active">
+    <img src="assets/img/home.svg" alt="home" class="icon">
+    <span>Home</span>
+  </button>
 
-  <div class="nav-item">
-    <i data-lucide="heart"></i>
-  </div>
+  <button class="tab">
+    <img src="assets/img/shop.svg" alt="shop" class="icon">
+    <span>Shop</span>
+  </button>
 
-  <div class="nav-item">
-    <i data-lucide="user"></i>
-  </div>
+ <!--- <button class="tab">
+    <img src="assets/img/cart.svg" alt="cart" class="icon">
+    <span>Cart</span>
+  </button>------>
+
+  <button class="tab">
+    <img src="assets/img/contacto.svg" alt="user" class="icon">
+    <span>Profile</span>
+  </button>
+
 </nav>
+
+</body>
