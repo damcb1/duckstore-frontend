@@ -1,87 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+  </style>
 
-  <!-- FUENTES EXACTAS -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="stylesheet" href="styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <title>Quack & Splash</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-<div class="app">
 
-  <section class="hero">
-    <h1>
-      Elevate Your <br>
-      <span>Bath Time</span>
+  <main class="page">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+
+      <div class="pill">PREMIUM RUBBER DUCKS</div>
+
+      <h1 class="plus-jakarta-sans-fonts-google">
+        Elevate Your<br>
+        <span>Bath Time</span>
     </h1>
 
-    <p>
-      Discover the world’s most original and safest bath ducks,
-      designed for the ultimate bathing experience.
-    </p>
+      <p class="text">
+        Discover curated premium rubber ducks designed for joyful bathing experiences.
+      </p>
 
-    <button class="btn">Shop The Collection</button>
-    <a class="link">Our Story</a>
-  </section>
-
-  <section class="hero-card">
-    <img src="duck.png">
-  </section>
-
-  <section class="mission">
-    <span class="overline">OUR PHILOSOPHY</span>
-    <h3>The Quack Mission</h3>
-
-    <p class="quote">
-      “We believe that a single moment of happiness can change your outlook.
-      Our mission is to bring joy to your everyday routines.”
-    </p>
-
-    <div class="features">
-      <div>
-        <h4>Crafted Joy</h4>
-        <p>Premium toys made with quality materials.</p>
+      <div class="cta">
+        <button class="btn primary">Shop The Collection →</button>
+        <button class="btn secondary">Our Story</button>
       </div>
 
-      <div>
-        <h4>Conscious Materials</h4>
-        <p>Eco-friendly & sustainable components.</p>
+      <div class="hero-image">
+        <img src="duck-main.png" alt="">
       </div>
-    </div>
-  </section>
 
-  <section class="products">
-    <h3>Featured Floats</h3>
+    </section>>
 
-    <div class="product dark">
-      <img src="duck1.png">
-      <p>The Golden Admiral</p>
-      <span>$12.99</span>
-    </div>
+    <!-- ================= PHILOSOPHY ================= -->
+    <section class="philosophy">
 
-    <div class="product yellow">
-      <img src="duck2.png">
-      <p>Neon Mighty</p>
-      <span>$12.99</span>
-    </div>
+      <div class="label">OUR PHILOSOPHY</div>
 
-    <div class="product light">
-      <img src="duck3.png">
-      <p>Classic Yellow</p>
-      <span>$12.99</span>
-    </div>
-  </section>
+      <h2>The Quack Mission</h2>
 
-  <section class="cta">
-    <h2>Join the Quack Pack</h2>
-    <p>Get the latest updates and exclusive offers.</p>
-    <button class="btn">Subscribe</button>
-  </section>
+      <div class="quote">
+        “We believe that a single moment of buoyancy can change your entire day.”
+      </div>
 
-</div>
+      <div class="feature">
+        <div class="icon">✨</div>
+        <div>
+          <h3>Curated Joy</h3>
+          <p>Hand-selected ducks with personality.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="icon">💧</div>
+        <div>
+          <h3>Eco Materials</h3>
+          <p>Sustainable rubber compounds.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= PRODUCTS ================= -->
+    <section class="products">
+
+      <h2>Featured Floats</h2>
+      <p class="sub">Our seasonal favorites</p>
+
+      <div class="grid">
+
+        <div class="card large">
+          <img src="duck1.png">
+          <h3>The Golden Admiral</h3>
+          <span>Limited Edition</span>
+        </div>
+
+        <div class="card">
+          <img src="duck2.png">
+          <h3>Neon Nightly</h3>
+          <span>€24.00</span>
+        </div>
+
+        <div class="card">
+          <img src="duck3.png">
+          <h3>Classic Deluxe</h3>
+          <span>€18.00</span>
+        </div>
+
+        <div class="card">
+          <img src="duck4.png">
+          <h3>Ocean Spark</h3>
+          <span>€22.00</span>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
 </body>
+
 </html>
