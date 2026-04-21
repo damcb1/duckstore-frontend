@@ -27,7 +27,7 @@ body{
    NAV CONTAINER (Figma style)
 ========================= */
 .bottom-nav{
-  position:fixed;
+  position:absolute;
   bottom:0;
   left:0;
   right:0;
