@@ -15,14 +15,24 @@
     </head>
 
 <body>
-    <!--HEADER-->
+    <!--HEADER: Importado-->
+
+    <header id="header"></header>
+    
+    <script>
+        fetch('/header.html') 
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+    </script>
 
     <!--MAIN: Galería de productos-->
 
     <main class="gallery-page">
         <section class="gallery-header">
             <p class="gallery-header-label">Curated Collection</p>
-            <h1 class="gallery-header-title">The Duck<br /><em>Gallery</em></h1>
+            <h1 class="gallery-header-title">The Duck <em>Gallery</em></h1>
         </section>
 
     <!--PRODUCTS: Featured card-->
@@ -31,7 +41,7 @@
         <span class="card-badge">Limited Edition</span>
 
         <div class="card-featured-info">
-            <h2 class="card-featured-name">Golden<br />Ducky</h2>
+            <h2 class="card-featured-name">Golden Ducky</h2>
             <p class="card-featured-desc">24k Matte Finish Premium Collector's Piece. A masterpiece of craftmanship for the discerning enthusiast.</p>
             <p class="card-featured-price">€124.00</p>
         </div>
@@ -47,7 +57,15 @@
 
             <article class="card card-secondary">
                 <div class="card-img-wrap">
-                    <img>
+                    <img src="../../assets/images/Sailor-duck.png" alt="The Sailor Duck" class="card-img">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-name">The Sailor Duck</h3>
+
+                    <div class="card-footer">
+                        <p class="card-series">Voyager Series</p>
+                        <span class="card-price">€40</span>
+                    </div>
                 </div>
             </article>
 
@@ -55,7 +73,7 @@
 
             <article class="card card-secondary card-alt">
                 <div class="card-img-wrap">
-                    <img src="../../assets/images/Artist-duck.png" alt="Boutique Artist" class="card-img">
+                    <img src="../../assets/images/Artist-duck.png" alt="The Boutique Artist Duck" class="card-img">
                 </div>
                 <div class="card-body">
                     <h3 class="card-name">The Boutique Artist</h3>
