@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+  <script src="/assets/js/navbar.js" defer></script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -10,7 +11,6 @@
 <style>
 /* =========================
    FOOTER
-========================= */
 body{
   margin:0;
   background:#ffffff;
@@ -19,7 +19,6 @@ body{
 
 /* =========================
    NAV
-========================= */
 .bottom-nav{
   position:fixed;
   bottom:16px;
@@ -38,7 +37,6 @@ body{
 
 /* =========================
    ITEM
-========================= */
 .tab{
   flex:1;
 
@@ -55,7 +53,6 @@ body{
 
 /* =========================
    ICON (FORZADO VISIBLE)
-========================= */
 .icon{
   width:28px;
   height:28px;
@@ -69,6 +66,7 @@ body{
 }
 </style>
 
+<link rel="stylesheet" href="/css/footer.css">
 </head>
 
 <body>
@@ -76,25 +74,20 @@ body{
 <nav class="bottom-nav">
 
   <button class="tab active">
-    <img src="assets/img/home.svg" alt="home" class="icon">
-    <span>Home</span>
+    <a href="#">
+    <img src="/assets/icons/home.svg" alt="home"></a>
   </button>
 
-  <button class="tab">
-    <img src="assets/img/shop.svg" alt="shop" class="icon">
-    <span>Shop</span>
+  <button class="tab"><a href="/pages/catalogo-productos/">
+    <img src="/assets/icons/shop.svg" alt="shop"></a>
   </button>
 
- <!--- <button class="tab">
-    <img src="assets/img/cart.svg" alt="cart" class="icon">
-    <span>Cart</span>
-  </button>------>
-
-  <button class="tab">
-    <img src="assets/img/contacto.svg" alt="user" class="icon">
-    <span>Profile</span>
+  <button class="tab"><a href="/pages/contacto/">
+    <img src="/assets/icons/contacto.svg" alt="contacto"></a>
   </button>
 
 </nav>
 <!---   TERMINA EL FOOTER ---->
 </body>
+
+</html>
