@@ -10,79 +10,35 @@
   font-style: strong;
   color: #854D0E;
   font-size: 20px;
-  f
+  
 }
-
+/* =========================================
+   HEADER (BUSCADOR CENTRADO)
+   ========================================= */
 .header {
-    
-  position: sticky;
+  /* Posicionamiento */
+  position: fixed;
   top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
 
-  margin: 12px;
-
+  /* Dimensiones */
+  width: calc(100% - 24px);
+  max-width: 380px;
   height: 52px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 14px;
-
-  background: rgba(255, 255, 255, 0.78);
+  /* Estética Glassmorphism */
+  background: var(--white-glass);
   backdrop-filter: blur(16px);
-
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 20px;
-
   border: 1px solid rgba(255, 215, 0, 0.16);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
 
-  box-shadow:
-    0 10px 24px rgba(0,0,0,0.08);
-}
-
-/* =========================
-   LOGO (CENTER BALANCE)
-========================= */
-.logo {
-  font-family: 'Plus Jakarta Sans';
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: -0.02em;
-  color: #854D0E;
-}
-
-/* =========================
-   ICON BUTTONS (KEY DETAIL)
-========================= */
-.icon-btn {
-  width: 38px;
-  height: 38px;
-
+  /* Alineación interna */
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 12px;
-
-  background: #F3E9B5;
-
-  border: none;
-
-  box-shadow:
-    inset 0 2px 3px rgba(255,255,255,0.6),
-    inset 0 -3px 6px rgba(0,0,0,0.06);
-}
-
-/* =========================
-   SVG ICON STYLE (CRUCIAL)
-========================= */
-.icon {
-  width: 18px;
-  height: 18px;
-
-  stroke: #3D3905;
-  stroke-width: 2;
-  fill: none;
-
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  padding: 0 14px;
 }
