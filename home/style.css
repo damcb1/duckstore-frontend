@@ -1,25 +1,30 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* =========================
+   BASE
+========================= */
 body {
   background: #f5f1e8;
   font-family: system-ui, sans-serif;
   color: #222;
 }
 
-/* APP CONTAINER */
-.app {
+.page {
   max-width: 420px;
   margin: auto;
-  background: #f5f1e8;
-  padding-bottom: 80px;
+  padding: 20px;
 }
 
-/* LABEL */
+/* =========================
+   LABEL
+========================= */
 .label {
   font-size: 11px;
   letter-spacing: 2px;
@@ -27,10 +32,12 @@ body {
   text-transform: uppercase;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
   text-align: center;
-  padding: 30px 20px;
+  padding: 30px 0;
 }
 
 .hero h1 {
@@ -44,10 +51,12 @@ body {
   color: #6d6d6d;
 }
 
-/* BUTTON */
+/* =========================
+   BUTTON
+========================= */
 .btn.primary {
   display: inline-block;
-  background: #f4c400;
+  background: linear-gradient(90deg, #a98b00, #ffd400);
   color: #000;
   padding: 12px 20px;
   border-radius: 30px;
@@ -63,7 +72,9 @@ body {
   font-size: 14px;
 }
 
-/* HERO IMAGE */
+/* =========================
+   HERO IMAGE
+========================= */
 .hero-image {
   margin-top: 20px;
 }
@@ -71,12 +82,14 @@ body {
 .hero-image img {
   width: 100%;
   border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
-/* MISSION */
+/* =========================
+   MISSION
+========================= */
 .mission {
-  padding: 30px 20px;
+  padding: 30px 0;
   text-align: center;
 }
 
@@ -90,7 +103,9 @@ body {
   margin-bottom: 20px;
 }
 
-/* FEATURES */
+/* =========================
+   FEATURES
+========================= */
 .feature {
   display: flex;
   gap: 10px;
@@ -100,18 +115,20 @@ body {
 }
 
 .icon {
-  background: #e6f0ff;
-  width: 28px;
-  height: 28px;
+  background: #fff3b0;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* PRODUCTS */
+/* =========================
+   PRODUCTS
+========================= */
 .products {
-  padding: 30px 20px;
+  padding: 30px 0;
 }
 
 .products h3 {
@@ -123,7 +140,9 @@ body {
   color: #777;
 }
 
-/* CARDS */
+/* =========================
+   CARDS
+========================= */
 .cards {
   margin-top: 20px;
   display: flex;
@@ -151,37 +170,114 @@ body {
   font-size: 13px;
 }
 
-/* CTA */
-.cta {
-  background: #f4c400;
-  margin: 20px;
-  padding: 25px;
-  border-radius: 25px;
-  text-align: center;
-}
-
+/* =========================
+   FORM (IMPORTANTE)
+========================= */
 .form {
-  margin-top: 15px;
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
 }
 
-.form input {
-  flex: 1;
-  padding: 10px;
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 12px;
   border-radius: 20px;
   border: none;
+  background: #efe3b0;
+}
+
+.form textarea {
+  height: 100px;
+  resize: none;
 }
 
 .form button {
-  background: black;
-  color: white;
+  background: linear-gradient(90deg, #a98b00, #ffd400);
+  color: #000;
   border: none;
-  padding: 10px 15px;
+  padding: 12px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =========================
+   SOCIAL CARD
+========================= */
+.social {
+  background: #f7d84a;
+  margin-top: 20px;
+  padding: 20px;
   border-radius: 20px;
 }
 
-/* NAVBAR */
+/* =========================
+   ICON MENU (FIGMA)
+========================= */
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.icon-circle img {
+  width: 18px;
+  height: 18px;
+  opacity: 0.6;
+}
+
+.icon-item span {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #a77b2f;
+}
+
+/* ATIVO */
+.icon-item.active .icon-circle {
+  background: #ffd400;
+}
+
+.icon-item.active img {
+  opacity: 1;
+}
+
+.icon-item.active span {
+  font-weight: bold;
+  color: #3b3b00;
+}
+
+/* HOVER */
+.icon-item:hover .icon-circle {
+  transform: scale(1.08);
+}
+
+/* =========================
+   NAVBAR (BOTTOM)
+========================= */
 .bottom-nav {
   position: fixed;
   bottom: 0;
