@@ -36,7 +36,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
-}
+
 
 .label {
   font-size: 12px;
@@ -66,7 +66,7 @@ h1 {
 
 .duck-card img {
   width: 100%;
-  height: :auto;
+  height:auto;
 }
 
 /* =========================
