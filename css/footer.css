@@ -1,90 +1,54 @@
-
 /* =========================
-   DESIGN TOKENS (TU SISTEMA)
+FOOTER - FIX VISUAL REAL
 ========================= */
-:root{
-  --yellow:#FFD700;
-  --surface:#FFFAE1;
-  --ink:#3D3905;
+
+.bottom-nav {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 24px);
+    max-width: 534px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: #f7f3de;
+    border-radius: 18px;
 }
 
-/* =========================
-   RESET
-========================= */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+/* BOTÓN */
+.bottom-nav .tab {
+    flex: 1;
+    background: #f7f3de;
+    border: 1px solid #f7f3de;
+    border-radius: 6px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-body{
-  font-family:"Be Vietnam Pro", sans-serif;
-  background:var(--surface);
-  color:#ffffff;
+/* ICONO */
+.bottom-nav .tab img {
+   .bottom-nav .tab img {
+    width: 70px;
+    height: 70px;
+    transition: 0.2s ease;
+}
 }
 
-/* =========================
-   NAV CONTAINER (Figma style)
-========================= */
-.bottom-nav{
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-  padding:10px 16px 22px;
-  background:var(--surface);
-  border-top:1px solid rgba(61,57,5,0.08);
-  background-color: #ffffff;
+/* HOVER GENERAL (botón) */
+.bottom-nav .tab:hover {
+    background: #facc15;
 }
 
-/* =========================
-   TAB
-========================= */
-.tab{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:4px;
-  border:none;
-  background:transparent;
-  font-size:10px;
-  font-weight:600;
-  color:#A16207;
-  opacity:0.55;
-  cursor:pointer;
+/* ACTIVO */
+.bottom-nav .tab.active {
+ 
+    border-color: #f7f3de;
+    border-radius: 14px;
 }
 
-/* =========================
-   ICON (IMAGES)
-========================= */
-.icon{
-  width:24px;
-  height:24px;
 
-  object-fit:contain;
-
-  filter: brightness(0) saturate(100%) invert(14%) sepia(12%) saturate(1090%) hue-rotate(18deg) brightness(92%) contrast(90%);
-}
-
-/* =========================
-   ACTIVE STATE
-========================= */
-.tab.active{
-  opacity:1;
-}
-
-.tab.active .icon{
-  filter: brightness(0) saturate(100%) invert(71%) sepia(93%) saturate(600%) hue-rotate(2deg) brightness(103%) contrast(101%);
-}
-
-/* =========================
-   PRESS FEEL (APP UX)
-========================= */
-.tab:active{
-  transform:scale(0.95);
-}
