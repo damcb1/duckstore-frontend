@@ -13,6 +13,21 @@
     </head>
 
     <body>
+
+            <!--HEADER: Importado-->
+
+    <header id="header"></header>
+    
+    <script>
+        fetch('/header.html') 
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+    </script>
+
+<div class="page-content"> 
+    
         <main class="product-page">
 
         <section class="product-hero">
@@ -78,6 +93,21 @@
     </section>
  
   </main>
+
+    <!--FOOTER: Importado-->
+
+    <footer id="footer"></footer>
+    
+    <script>
+        fetch('/footer.html') 
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+    </script>
+
+</div>
+
 </body>
 
 </html>

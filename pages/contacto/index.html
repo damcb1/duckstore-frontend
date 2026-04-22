@@ -10,6 +10,20 @@
 
 <body>
 
+<!--HEADER: Importado-->
+
+    <header id="header"></header>
+    
+    <script>
+        fetch('/header.html') 
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+    </script>
+
+<div class="page-content">
+
 <div class="page">
 
   <section class="hero">
@@ -37,7 +51,10 @@
         </div>
 
         <button type="submit">Send a Quack ➤</button>
+        <!-- Botón mailto directo -->
       </form>
+
+      <a href="mailto:hola@quackandsplash.com" class="btn-mailto">Send a Quack ➤</a>
 
       <!-- MAP -->
       <div class="card location">
@@ -122,10 +139,11 @@
 
     <h3>Send us a message</h3>
 
-    <form>
-      <textarea placeholder="Write your message..." required></textarea>
-      <button type="submit">Send</button>
-    </form>
+      <div class="field">
+    <label for="message">Message</label>
+    <textarea id="message" placeholder="Tell us what's on your beak..." required></textarea>
+  </div>
+  <button type="submit">Send a Quack ➤</button>
 
   </div>
 </div>
@@ -140,6 +158,20 @@
     document.getElementById("contactModal").style.display = "none";
   }
 </script>
+
+<!--FOOTER: Importado-->
+
+    <footer id="footer"></footer>
+    
+    <script>
+        fetch('/footer.html') 
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+    </script>
+
+</div>
 
 </body>
 </html>
