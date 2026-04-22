@@ -4,6 +4,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap');
 
+
+
+
 /* TIPOGRAFÍA */
 .plus-jakarta-sans-fonts-google {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -78,11 +81,4 @@
   .plus-jakarta-sans-fonts-google {
     font-size: 22px;
   }
-}
-
-/* =========================
-   ESPACIO PARA HEADER FIJO
-========================= */
-body {
-  padding-top: 80px;
 }
