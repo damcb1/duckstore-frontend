@@ -32,11 +32,9 @@ FOOTER - FIX VISUAL REAL
 
 /* ICONO */
 .bottom-nav .tab img {
-   .bottom-nav .tab img {
     width: 70px;
     height: 70px;
     transition: 0.2s ease;
-}
 }
 
 /* HOVER GENERAL (botón) */
@@ -51,4 +49,7 @@ FOOTER - FIX VISUAL REAL
     border-radius: 14px;
 }
 
-
+/* PADDING FINAL */
+body {
+  padding-bottom: 80px; 
+}

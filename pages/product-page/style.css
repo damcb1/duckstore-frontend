@@ -6,6 +6,10 @@ body {
   padding-bottom: 72px;
 }
 
+.page-content {
+  margin-top: 80px;
+}
+
 .product-page {
   max-width: 480px;
   margin: 0 auto;
@@ -232,6 +236,10 @@ details[open] .accordion-chevron {
  
 body {
     padding-bottom: 0;
+}
+
+.page-content {
+    margin-top: 40px;
 }
   
 .product-page {

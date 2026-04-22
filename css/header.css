@@ -16,7 +16,7 @@
    HEADER BASE
 ========================= */
 .header {
-  position: absolute;
+  position: fixed;
   top: 12px;
   left: 50%;
   transform: translateX(-50%);
@@ -78,11 +78,4 @@
   .plus-jakarta-sans-fonts-google {
     font-size: 22px;
   }
-}
-
-/* =========================
-   ESPACIO PARA HEADER FIJO
-========================= */
-body {
-  padding-top: 80px;
 }
