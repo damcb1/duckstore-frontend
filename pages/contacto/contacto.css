@@ -119,11 +119,11 @@ button {
 }
 
 .location {
-  background: #f2ebc9;
+  background: #FFFAE1;
 }
 
 .social {
-  background: #ffe880;
+  background: #F3EB91;
 }
 
 /* =========================
@@ -178,13 +178,19 @@ button {
 
 /* ativo */
 .icon-item.active .icon-circle {
-  background: #ffd400;
-  box-shadow: 0 6px 14px rgba(255, 212, 0, 0.4);
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
 }
 
 .icon-item.active span {
-  font-weight: bold;
-  color: #3b3b00;
+  font-weight: normal;
+  color: #a77b2f;
+}
+
+.social p {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.08);
 }
 
 /* hover */
@@ -335,5 +341,44 @@ button {
    OCULTAR FORMULARIO
 ========================= */
 .form {
-  display: none;   /* ← aquí ocultas el form */
+  display: none; 
+}
+
+@media (min-width: 768px) {
+
+  .page {
+    max-width: 700px;   /* más ancho en tablet */
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  h1 {
+    font-size: 52px;
+  }
+
+  .duck-card {
+    max-width: 500px;
+    margin: 0 auto 30px;  /* centra la imagen */
+  }
+
+  .btn-mailto {
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .page {
+    max-width: 900px;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
 }
