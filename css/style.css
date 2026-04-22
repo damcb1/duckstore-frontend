@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+}
+
+.hero {
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 420px;
+  margin: auto;
+}
+
+.label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #a77b2f;
+}
+
+h1 {
+  font-size: 42px;
+  color: #3b3b00;
+  margin: 10px 0;
+}
+
+.desc {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* CARD DO PATO */
+.duck-card {
+  background: #f2f2f2;
+  border-radius: 25px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.duck-card img {
+  width: 100%;
+  max-width: 260px;
+}
+
+/* FORM */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  background: #f2ebc9;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(90deg, #a98b00, #ffd400);
+  color: white;
+  font-weight: bold;
+}
+
+/* CARDS */
+.card {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.location {
+  background: #f2ebc9;
+}
+
+.social {
+  background: #ffe880;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.icons div {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

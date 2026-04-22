@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="DuckStore User Flow">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- NODES -->
+        <mxCell id="start" value="Start" style="ellipse;fillColor=#6c63ff;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="100" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="home" value="Home Page" style="rounded=1;fillColor=#000000;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="180" y="300" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="catalog" value="Product Catalog" style="rounded=1;fillColor=#4caf50;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="380" y="200" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="product" value="Product Page" style="rounded=1;fillColor=#2196f3;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="200" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cart" value="Cart" style="rounded=1;fillColor=#ff9800;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="820" y="200" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="checkout" value="Checkout" style="rounded=1;fillColor=#f44336;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="200" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="successShop" value="Success Purchase" style="ellipse;fillColor=#8bc34a;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="200" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="contact" value="Contact Page" style="rounded=1;fillColor=#9c27b0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="380" y="420" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="form" value="Fill Form" style="rounded=1;fillColor=#607d8b;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="420" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="submit" value="Submit Message" style="rounded=1;fillColor=#795548;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="780" y="420" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="successContact" value="Success Contact" style="ellipse;fillColor=#4caf50;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="420" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="modal" value="Open Modal" style="rounded=1;fillColor=#3f51b5;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="520" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="external" value="External Links" style="rounded=1;fillColor=#009688;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="820" y="520" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- EDGES WITH LABELS -->
+        <mxCell edge="1" value="Enter Site" parent="1" source="start" target="home"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell edge="1" value="Shop Collection" parent="1" source="home" target="catalog"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" value="Select Product" parent="1" source="catalog" target="product"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" value="Add to Cart" parent="1" source="product" target="cart"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" value="Proceed to Checkout" parent="1" source="cart" target="checkout"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" value="Payment Success" parent="1" source="checkout" target="successShop"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell edge="1" value="Contact / Help" parent="1" source="home" target="contact"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell edge="1" value="Write Message" parent="1" source="contact" target="form"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" value="Submit" parent="1" source="form" target="submit"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" value="Message Sent" parent="1" source="submit" target="successContact"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell edge="1" value="Open Chat" parent="1" source="contact" target="modal"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" value="Social / Email" parent="1" source="contact" target="external"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

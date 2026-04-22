@@ -1,0 +1,284 @@
+/* =========================================
+   VARIABLES Y CONFIGURACIÓN
+   ========================================= */
+@IMPORT "../../css/header.css";
+
+@import "../../css/footer.css";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+.plus-jakarta-sans-fonts-google {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: strong;
+  color: #854D0E;
+  font-size: 20px;
+  
+}
+:root {
+  --yellow: #FFD700;
+  --yellow-dark: #C7A600;
+  --blue: #B0D5FF;
+  --bg-top: #f6f4ef;
+  --bg-bottom: #e9e4d8;
+  --ebony: #3D3905;
+  --muted: #6B662F;
+  --white-glass: rgba(255, 255, 255, 0.78);
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 80px 20px 40px; /* Aumentamos padding superior para que el header no tape el contenido */
+}
+
+/* =========================================
+   SECCIÓN HERO - MOBILE
+   ========================================= */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #efe8c9;
+  color: #8a7a2f;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #3D3905;
+}
+
+h1 span {
+  font-style: italic;
+  display: block;
+  color: #776300;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 16px 0 26px;
+}
+
+/* =========================================
+   BOTONES Y TARJETAS
+   ========================================= */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, #9f8600, var(--yellow));
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn.secondary {
+  background: #ffffff;
+  color: var(--muted);
+  border: 1px solid #ddd;
+}
+
+.card {
+  margin-top: 10px;
+  border-radius: 26px;
+  overflow: hidden;
+  padding: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+/* =========================================
+   SECCIÓN MISIÓN Y FEATURES
+   ========================================= */
+.mission {
+  background: #fffae1;
+  margin-top: 50px;
+  padding: 40px 20px;
+  border-radius: 20px;
+}
+
+.mission-subtitle {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #9a6a00;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.mission h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--ebony);
+  margin-bottom: 25px;
+}
+
+.quote-box {
+  background: #f5f1e4;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+}
+
+.quote-box p {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* Reutilización de círculos de iconos */
+.feature-icon-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.yellow { background: var(--yellow); }
+.blue { background: var(--blue); }
+
+.feature h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ebony);
+}
+
+.feature p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* =========================================
+   RESPONSIVE - TABLET Y DESKTOP
+   ========================================= */
+
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto; 
+    padding: 100px 40px 60px;
+  }
+
+  /* Hero en dos columnas: texto izquierda, imagen derecha */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+
+  h1 {
+    font-size: 52px;
+  }
+
+  .buttons {
+    flex-direction: row;
+  }
+
+  .btn {
+    padding: 14px 28px;
+  }
+
+  /* Misión en dos columnas */
+  .mission {
+    padding: 60px 40px;
+  }
+
+  .mission h2 {
+    font-size: 36px;
+  }
+
+  .features {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .feature {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  h1 {
+    font-size: 64px;
+  }
+
+}
