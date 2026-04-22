@@ -51,4 +51,6 @@ FOOTER - FIX VISUAL REAL
     border-radius: 14px;
 }
 
-
+.body {
+    padding-bottom: 100px;
+}

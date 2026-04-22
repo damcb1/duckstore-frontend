@@ -1,8 +1,8 @@
 /* =========================================
    VARIABLES Y CONFIGURACIÓN
    ========================================= */
-   @IMPORT "../../css/header.css";
-@import "../pages/catalogo-productos/style.css";
+@IMPORT "../../css/header.css";
+
 @import "../../css/footer.css";
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
@@ -125,7 +125,6 @@ h1 span {
   margin-top: 10px;
   border-radius: 26px;
   overflow: hidden;
-  background: radial-gradient(circle at top, #222, #000);
   padding: 14px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
