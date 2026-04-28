@@ -1,109 +1,254 @@
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f3f3f3;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.hero {
-  padding: 40px 20px;
+body {
+  background: #fff;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #111;
+  padding: 16px;
 }
 
+/* CONTENEDOR */
 .container {
-  max-width: 420px;
-  margin: auto;
-}
-
-.label {
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: #a77b2f;
-}
-
-h1 {
-  font-size: 42px;
-  color: #3b3b00;
-  margin: 10px 0;
-}
-
-.desc {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-/* CARD DO PATO */
-.duck-card {
-  background: #f2f2f2;
-  border-radius: 25px;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.duck-card img {
   width: 100%;
-  max-width: 260px;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
-/* FORM */
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* SECCIONES */
+.header,
+
+.order,
+.summary,
+.shipping {
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
 }
 
-.field {
-  display: flex;
-  flex-direction: column;
+/* HEADER */
+.header {
+  background-color: #ffd7090d;
+  text-align: center;
 }
 
-input, textarea {
-  padding: 15px;
+.status {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #A86E00;
+  background: #ff97344a;
+  padding: 5px 10px;
   border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.header h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(20px, 4vw, 24px);
+  margin-bottom: 8px;
+}
+
+.header p {
+  font-size: clamp(13px, 3.5vw, 14px);
+  color: #6B662F;
+  line-height: 1.5;
+}
+
+/* BOTONES */
+.btn {
+  color:#004A79;
+  width: 29%;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-top: 10px;
   border: none;
-  background: #f2ebc9;
+  cursor: pointer;
 }
 
-textarea {
-  height: 100px;
+.primary {
+  background: #FFD84D;
 }
 
-button {
-  padding: 15px;
-  border-radius: 25px;
-  border: none;
-  background: linear-gradient(90deg, #a98b00, #ffd400);
-  color: white;
-  font-weight: bold;
+.secondary {
+  background: #B0D5FF;
 }
 
-/* CARDS */
-.card {
-  margin-top: 25px;
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.location {
-  background: #f2ebc9;
-}
-
-.social {
-  background: #ffe880;
-}
-
-.icons {
+/* IMAGEN */
+.image-card {
   display: flex;
-  gap: 10px;
-  margin: 10px 0;
-}
-
-.icons div {
-  width: 40px;
-  height: 40px;
-  background: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  
+}
+
+.image-card img {
+  width: clamp(120px, 40vw, 190px);
+  border-radius: 18px;
+  background: #000;
+  padding: 10px;
+}
+
+/* ORDER */
+.order h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  gap: 40px;
+}
+
+.item img {
+  width: 85px;
+  border-radius: 10px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.type {
+  font-size: 12px;
+  color: #777;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* SUMMARY */
+.summary h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin: 6px 0;
+  color: #555;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  font-weight: 700;
+}
+
+.total-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.amount {
+  font-size: 16px;
+}
+
+/*  BOTÓN IVA */
+
+.iva {
+  background: #FFD84D;
+  color: #000;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.badge {
+  .badge {
+    background: #FFD709;
+    color: #111;
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+}
+
+/* SHIPPING */
+.shipping {
+  font-size: 13px;
+  color: #444;
+}
+
+.delivery {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* 💻 TABLET */
+@media (min-width: 768px) {
+  body {
+    padding: 30px;
+  }
+
+  .container {
+    max-width: 600px;
+  }
+
+  .header,
+  .image-card,
+  .order,
+  .summary,
+  .shipping {
+    padding: 22px;
+  }
+}
+
+/* 🖥️ DESKTOP */
+@media (min-width: 1024px) {
+  body {
+    background: #f6f7fb; /* opcional para contraste en desktop */
+  }
+
+  .container {
+    max-width: 900px;
+  }
+
+  /* layout en 2 columnas */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+     max-width: 1100px;
+  }
+
+  .header {
+    grid-column: span 2;
+  }
+
+  .image-card {
+    order: 1;
+  }
+
+  .order {
+    order: 2;
+  }
+
+  .summary {
+    order: 3;
+  }
+
+  .shipping {
+    order: 4;
+  }
 }
