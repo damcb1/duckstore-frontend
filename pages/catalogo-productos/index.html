@@ -37,6 +37,19 @@
             <h1 class="gallery-header-title">The Duck <em>Gallery</em></h1>
         </section>
 
+        <div class="filters">
+            <button class="filter-btn" id="filterBtn">
+                Filter
+            </button>
+
+            <div class="filter-menu hidden" id="filterMenu">
+                <button data-category="all">All</button>
+                <button data-category="voyager">Voyager</button>
+                <button data-category="creative">Creative</button>
+                <button data-category="amazing">Amazing</button>
+            </div>
+        </div>
+
     <!--PRODUCTS: Featured card-->
 
         <article class="card card-featured">
@@ -55,9 +68,11 @@
         </div>
         </article>
 
-        <section class="product-grid">
+        <section class="product-grid" id="product-grid">
+        </section>
         
-        <!--PRODUCTS: Card 1-->
+        <!-- CARDS OCULTAS POR REEMPLAZO CON JS 
+            PRODUCTS: Card 1
 
             <article class="card card-secondary">
                 <div class="card-img-wrap">
@@ -73,7 +88,7 @@
                 </div>
             </article>
 
-        <!--PRODUCTS: Card 2-->
+        PRODUCTS: Card 2
 
             <article class="card card-secondary card-alt">
                 <div class="card-img-wrap">
@@ -90,7 +105,7 @@
                 </div>
             </article>
         
-        <!--PRODUCTS: Card 3-->
+        PRODUCTS: Card 3
 
             <article class="card card-secondary card-yellow">
                 <div class="card-img-wrap">
@@ -107,7 +122,7 @@
                 </div>
             </article>
 
-        <!--PRODUCTS: Card 4-->
+       PRODUCTS: Card 4
 
             <article class="card card-secondary">
                 <div class="card-img-wrap">
@@ -124,7 +139,7 @@
                 </div>
             </article>
 
-        <!--PRODUCTS: Card 5-->
+        PRODUCTS: Card 5
             
             <article class="card card-secondary">
                 <div class="card-img-wrap">
@@ -141,7 +156,7 @@
                 </div>
             </article>
 
-        <!--PRODUCTS: Card 6-->
+        PRODUCTS: Card 6
             
             <article class="card card-secondary">
                 <div class="card-img-wrap">
@@ -161,6 +176,8 @@
         </section>
 
     </main>
+    
+    CARDS OCULTAS POR REEMPLAZO CON JS -->
 
     <!--FOOTER: Importado-->
 
@@ -173,6 +190,9 @@
             document.getElementById('footer').innerHTML = data;
         });
     </script>
+
+    <script type="module" src="../../src/components/catalog/render-catalog.js"></script>
+
 </div>
 </body>
 </html>
