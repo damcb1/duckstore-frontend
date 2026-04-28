@@ -1,0 +1,33 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2F80ED"/>
+      <stop offset="100%" stop-color="#1C4ED8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <circle cx="64" cy="64" r="60" fill="url(#bg)"/>
+
+  <!-- Caja del camión -->
+  <rect x="28" y="48" width="44" height="28" rx="4" fill="#ffffff"/>
+
+  <!-- Cabina -->
+  <path d="M72 54 H88 L98 64 V76 H72 Z" fill="#ffffff"/>
+
+  <!-- Ventana -->
+  <rect x="78" y="56" width="10" height="8" rx="2" fill="#2F80ED"/>
+
+  <!-- Separación cabina/caja -->
+  <line x1="72" y1="54" x2="72" y2="76" stroke="#2F80ED" stroke-width="2" opacity="0.4"/>
+
+  <!-- Ruedas -->
+  <circle cx="44" cy="82" r="8" fill="#ffffff"/>
+  <circle cx="44" cy="82" r="4" fill="#2F80ED"/>
+
+  <circle cx="84" cy="82" r="8" fill="#ffffff"/>
+  <circle cx="84" cy="82" r="4" fill="#2F80ED"/>
+
+  <!-- Línea de suelo (ayuda a lectura) -->
+  <rect x="24" y="88" width="80" height="3" rx="1.5" fill="#ffffff" opacity="0.3"/>
+</svg>
