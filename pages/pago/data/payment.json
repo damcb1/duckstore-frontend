@@ -1,0 +1,34 @@
+{
+  "methods": [
+    {
+      "id": "card",
+      "name": "Tarjeta de Crédito / Débito",
+      "fields": [
+        { "type": "text", "placeholder": "0000 0000 0000 0000", "label": "Número de tarjeta" },
+        { "type": "text", "placeholder": "MM/YY", "label": "Vencimiento" },
+        { "type": "text", "placeholder": "***", "label": "CVV" },
+        { "type": "text", "placeholder": "Titular de la tarjeta", "label": "Nombre en la tarjeta" }
+      ]
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal"
+    },
+    {
+      "id": "apple",
+      "name": "Apple Pay / Google Pay"
+    }
+  ],
+  "cart": [
+    {
+      "name": "The Golden Quack",
+      "price": 29.95,
+      "image": "../../assets/images/premium-rubber-duck.png"
+    },
+    {
+      "name": "Minimalist Splash",
+      "price": 29.95,
+      "image": "../../assets/images/premium-rubber-duck.png"
+    }
+  ]
+}
