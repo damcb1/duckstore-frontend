@@ -38,6 +38,7 @@ body {
 .filters {
   position: relative;
   display: inline-block;
+<<<<<<< HEAD
   margin-bottom: 8px;
 }
 
@@ -76,10 +77,13 @@ body {
   width: 16px;
   height: 16px;
   opacity: 0.75;
+=======
+>>>>>>> b5365fb6223d21e698466158ddac7576e27e9551
 }
 
 .filter-menu {
   position: absolute;
+<<<<<<< HEAD
   top: calc(100% + 8px);
   left: 0;
   background: white;
@@ -92,11 +96,23 @@ body {
   min-width: 140px;
   z-index: 100;
   border: 1px solid #f0ead8;
+=======
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+>>>>>>> b5365fb6223d21e698466158ddac7576e27e9551
 }
 
 .filter-menu button {
   background: none;
   border: none;
+<<<<<<< HEAD
   padding: 10px 14px;
   cursor: pointer;
   text-align: left;
@@ -115,6 +131,11 @@ body {
 .filter-menu button.active-filter {
   background: #3d3905;
   color: #fffae1;
+=======
+  padding: 8px 12px;
+  cursor: pointer;
+  text-align: left;
+>>>>>>> b5365fb6223d21e698466158ddac7576e27e9551
 }
 
 .hidden {
