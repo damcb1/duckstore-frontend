@@ -2,33 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Message Sent</title>
+
   <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
 
-<div style="text-align:center; padding:60px;">
+<!-- HEADER -->
+<header id="header"></header>
 
-  <h1>🦆 Message Sent!</h1>
+<!-- CONTEÚDO -->
+<div class="page-content">
+  <div class="page success-page">
 
-  <p>Thanks for contacting Duck Pond HQ.</p>
-  <p>Our ducks will respond soon.</p>
+    <h1>🦆 Message Sent!</h1>
 
-  <a href="index.html" style="
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 30px;
-    background:#ffd000;
-    border-radius:30px;
-    text-decoration:none;
-    color:black;
-    font-weight:bold;
-  ">
-    Back to Contact
-  </a>
+    <p>Thanks for contacting Duck Pond HQ.</p>
+    <p>Our ducks will respond soon.</p>
 
+    <!-- BOTÃO CORRETO -->
+    <a href="index.html" class="btn-success">
+      Back to Contact
+    </a>
+
+  </div>
 </div>
+
+<!-- FOOTER -->
+<footer id="footer"></footer>
+
+<!-- SCRIPTS -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  fetch('../../header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+
+  fetch('../../footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+
+});
+</script>
 
 </body>
 </html>
