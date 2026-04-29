@@ -1,4 +1,5 @@
 /* =========================
+<<<<<<< HEAD
    RESET
 ========================= */
 * {
@@ -14,11 +15,39 @@ body {
   font-family: Arial, sans-serif;
   background: #ffffff;
   color: #3b3b00;
+=======
+   BASE
+========================= */
+* {
+  box-sizing: border-box; /* 👈 ESSENCIAL (resolve overflow) */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f6f3;
+  color: #333;
+}
+
+/* =========================
+   HEADER
+========================= */
+.app-header {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 30px;
+  margin: 15px auto 25px; /* 👈 espaço abaixo */
+  max-width: 360px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  font-weight: bold;
+>>>>>>> 7cd874c4a5a75a775fc422548b23b0406dde5144
 }
 
 /* =========================
    PAGE
 ========================= */
+<<<<<<< HEAD
 .page-content {
   padding-top: 80px;
 }
@@ -27,6 +56,12 @@ body {
   max-width: 430px;
   margin: 0 auto;
   padding: 20px 20px 80px; /* 🔥 espaço pro footer */
+=======
+.page {
+  max-width: 360px;
+  margin: auto;
+  padding: 0 15px 20px;
+>>>>>>> 7cd874c4a5a75a775fc422548b23b0406dde5144
 }
 
 /* =========================
@@ -34,8 +69,12 @@ body {
 ========================= */
 h1 {
   font-size: 26px;
+<<<<<<< HEAD
   margin-bottom: 20px;
   margin-top: 10px;
+=======
+  margin: 10px 0 20px;
+>>>>>>> 7cd874c4a5a75a775fc422548b23b0406dde5144
 }
 
 h2 {
@@ -47,6 +86,7 @@ h2 {
    PAYMENT CARD
 ========================= */
 .payment-card {
+<<<<<<< HEAD
   background: #ffffff;
   border-radius: 24px;
   padding: 18px;
@@ -55,6 +95,15 @@ h2 {
   border: 2px solid #FFD709;
 
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+=======
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 25px;
+  padding: 16px;
+  border: 2px solid #e6c200;
+  border-radius: 22px;
+  background: #fdf4d7;
+>>>>>>> 7cd874c4a5a75a775fc422548b23b0406dde5144
 }
 
 /* =========================
@@ -64,11 +113,19 @@ h2 {
   display: flex;
   align-items: center;
   gap: 10px;
+<<<<<<< HEAD
   margin-bottom: 18px;
 }
 
 .card-header h3 {
   font-size: 15px;
+=======
+  margin-bottom: 15px;
+}
+
+.card-header h3 {
+  font-size: 16px;
+>>>>>>> 7cd874c4a5a75a775fc422548b23b0406dde5144
   font-weight: 600;
 }
 
@@ -76,6 +133,7 @@ h2 {
    RADIO
 ========================= */
 .radio {
+<<<<<<< HEAD
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -85,6 +143,17 @@ h2 {
 .radio.active {
   background: #FFD709;
   border-color: #FFD709;
+=======
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.radio.active {
+  background: #e6c200;
+  border-color: #e6c200;
+>>>>>>> 7cd874c4a5a75a775fc422548b23b0406dde5144
 }
 
 /* =========================
@@ -97,14 +166,21 @@ h2 {
 .field label {
   font-size: 11px;
   letter-spacing: 0.5px;
+<<<<<<< HEAD
   color: #6b662f;
   display: block;
   margin-bottom: 5px;
   text-align: left;
+=======
+  color: #7a7a7a;
+  display: block;
+  margin-bottom: 5px;
+>>>>>>> 7cd874c4a5a75a775fc422548b23b0406dde5144
 }
 
 .field input {
   width: 100%;
+<<<<<<< HEAD
   padding: 14px 16px;
   border-radius: 20px;
   border: none;
@@ -113,6 +189,14 @@ h2 {
   font-size: 14px;
 
   box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+=======
+  padding: 12px 14px;
+  border-radius: 18px;
+  border: none;
+  background: #f3e4b5;
+  font-size: 14px;
+  outline: none;
+>>>>>>> 7cd874c4a5a75a775fc422548b23b0406dde5144
 }
 
 /* =========================
@@ -125,6 +209,7 @@ h2 {
 
 .row .field {
   flex: 1;
+<<<<<<< HEAD
   min-width: 0;
 }
 
@@ -142,12 +227,31 @@ h2 {
   gap: 10px;
 
   font-size: 14px;
+=======
+  min-width: 0; /* 👈 evita quebrar layout */
+}
+
+/* =========================
+   OPTIONS (PayPal / Apple)
+========================= */
+.payment-option {
+  width: 100%;
+  margin: 0 auto 12px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #f3e4b5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+>>>>>>> 7cd874c4a5a75a775fc422548b23b0406dde5144
 }
 
 /* =========================
    SUMMARY
 ========================= */
 #summary {
+<<<<<<< HEAD
   background: #ffffff;
   border-radius: 24px;
   padding: 20px;
@@ -157,6 +261,18 @@ h2 {
 }
 
 /* ITEM */
+=======
+  background: white;
+  padding: 20px;
+  border-radius: 25px;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   SUMMARY ITEM
+========================= */
+>>>>>>> 7cd874c4a5a75a775fc422548b23b0406dde5144
 .summary-item {
   display: flex;
   align-items: center;
@@ -175,6 +291,7 @@ h2 {
   font-weight: 600;
 }
 
+<<<<<<< HEAD
 /* TOTAL */
 .total {
   margin-top: 20px;
@@ -193,6 +310,17 @@ h2 {
   font-size: 22px;
   font-weight: 800;
   color: #a88c00;
+=======
+/* =========================
+   TOTAL
+========================= */
+.total {
+  margin-top: 15px;
+}
+
+.total h3 {
+  font-size: 20px;
+>>>>>>> 7cd874c4a5a75a775fc422548b23b0406dde5144
 }
 
 /* =========================
@@ -201,6 +329,7 @@ h2 {
 button {
   width: 100%;
   padding: 16px;
+<<<<<<< HEAD
 
   border-radius: 30px;
   border: none;
@@ -241,4 +370,35 @@ footer {
     margin-top: 20px;
   }
 
+=======
+  background: linear-gradient(to right, #cfa700, #f5d000);
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* =========================
+   FOOTER NAV
+========================= */
+#footer {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 500px) {
+  .page {
+    padding: 0 15px 20px;
+  }
+>>>>>>> 7cd874c4a5a75a775fc422548b23b0406dde5144
 }
