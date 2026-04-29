@@ -1,0 +1,225 @@
+/* =========================
+   BASE
+========================= */
+* {
+  box-sizing: border-box; /* 👈 ESSENCIAL (resolve overflow) */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f6f3;
+  color: #333;
+}
+
+/* =========================
+   HEADER
+========================= */
+.app-header {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 30px;
+  margin: 15px auto 25px; /* 👈 espaço abaixo */
+  max-width: 360px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  font-weight: bold;
+}
+
+/* =========================
+   PAGE
+========================= */
+.page {
+  max-width: 360px;
+  margin: auto;
+  padding: 0 15px 20px;
+}
+
+/* =========================
+   TITLES
+========================= */
+h1 {
+  font-size: 26px;
+  margin: 10px 0 20px;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   PAYMENT CARD
+========================= */
+.payment-card {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 25px;
+  padding: 16px;
+  border: 2px solid #e6c200;
+  border-radius: 22px;
+  background: #fdf4d7;
+}
+
+/* =========================
+   CARD HEADER
+========================= */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.card-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* =========================
+   RADIO
+========================= */
+.radio {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.radio.active {
+  background: #e6c200;
+  border-color: #e6c200;
+}
+
+/* =========================
+   INPUTS
+========================= */
+.field {
+  margin-bottom: 12px;
+}
+
+.field label {
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: #7a7a7a;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.field input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 18px;
+  border: none;
+  background: #f3e4b5;
+  font-size: 14px;
+  outline: none;
+}
+
+/* =========================
+   ROW
+========================= */
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.row .field {
+  flex: 1;
+  min-width: 0; /* 👈 evita quebrar layout */
+}
+
+/* =========================
+   OPTIONS (PayPal / Apple)
+========================= */
+.payment-option {
+  width: 100%;
+  margin: 0 auto 12px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #f3e4b5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+/* =========================
+   SUMMARY
+========================= */
+#summary {
+  background: white;
+  padding: 20px;
+  border-radius: 25px;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   SUMMARY ITEM
+========================= */
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.summary-item img {
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+}
+
+.summary-item span {
+  margin-left: auto;
+  font-weight: 600;
+}
+
+/* =========================
+   TOTAL
+========================= */
+.total {
+  margin-top: 15px;
+}
+
+.total h3 {
+  font-size: 20px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+button {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(to right, #cfa700, #f5d000);
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* =========================
+   FOOTER NAV
+========================= */
+#footer {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 500px) {
+  .page {
+    padding: 0 15px 20px;
+  }
+}
