@@ -52,40 +52,27 @@ export const renderMethods = (methods) => {
         <span class="radio"></span>
         ${method.name}
 
-        <div class="payment-content" style="display:none; margin-top:10px;">
-          <p style="font-size:13px;">
-            Continue with ${method.name}
-          </p>
+        <div class="payment-content" style="display:none; text-align:center; margin-top:10px;">
 
-          <button style="
-            margin-top:10px;
-            padding:10px;
-            border-radius:20px;
-            border:none;
-            background:#FFD709;
-            font-weight:bold;
-            cursor:pointer;
-          ">
+          <button class="connect-btn" data-method="${method.id}">
             Connect ${method.name}
           </button>
+
         </div>
 
       </div>
     `;
   }).join("");
 
-  // 🔥 EVENTOS
-
   const options = document.querySelectorAll(".payment-option");
   const cards = document.querySelectorAll(".payment-card");
 
-  // 👉 PAYPAL / APPLE PAY
+  // 👉 SELEÇÃO (PAYPAL / APPLE)
   options.forEach(option => {
     option.addEventListener("click", () => {
 
       selectedMethod = option.dataset.type;
 
-      // reset
       options.forEach(o => {
         o.querySelector(".radio").classList.remove("active");
         const content = o.querySelector(".payment-content");
@@ -97,7 +84,6 @@ export const renderMethods = (methods) => {
         c.querySelector(".radio")?.classList.remove("active");
       });
 
-      // activate
       option.querySelector(".radio").classList.add("active");
 
       const content = option.querySelector(".payment-content");
@@ -126,7 +112,41 @@ export const renderMethods = (methods) => {
       card.querySelector(".radio").classList.add("active");
     });
   });
+
+  // 🔥 BOTÃO CONNECT (SEM QUEBRAR FLUXO)
+  container.addEventListener("click", (e) => {
+
+    const btn = e.target.closest(".connect-btn");
+    if (!btn) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const method = btn.dataset.method;
+
+    console.log("Connecting with:", method);
+
+    // feedback visual
+    btn.innerText = "Connecting...";
+    btn.disabled = true;
+    btn.style.opacity = "0.7";
+
+    setTimeout(() => {
+
+      if (method === "paypal") {
+        alert("Connected to PayPal 💰");
+      }
+
+      if (method === "apple") {
+        alert("Apple Pay ready 🍎");
+      }
+
+      btn.innerText = "Connected ✔";
+      btn.style.opacity = "1";
+
+    }, 1000);
+  });
 };
 
-// 🔥 export para usar no main.js
+// 🔥 export
 export const getSelectedMethod = () => selectedMethod;

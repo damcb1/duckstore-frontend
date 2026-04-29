@@ -10,13 +10,12 @@ fetch('./data/payment.json')
   })
   .then(data => {
 
-    // render UI
     renderMethods(data.methods);
     renderSummary(data.cart);
 
     const payBtn = document.getElementById("payBtn");
 
-    payBtn.addEventListener("click", () => {
+    payBtn.onclick = () => {
 
       const selectedMethod = getSelectedMethod();
 
@@ -27,25 +26,23 @@ fetch('./data/payment.json')
 
       // 💳 CARD
       if (selectedMethod === "card") {
-        alert("Pago realizado con tarjeta 💳");
+        alert("Pago con tarjeta 💳");
       }
 
       // 💰 PAYPAL
       else if (selectedMethod === "paypal") {
-        alert("Redirigiendo a PayPal...");
+        alert("Pago con PayPal 💰");
       }
 
       // 🍎 APPLE PAY
       else if (selectedMethod === "apple") {
-        alert("Procesando Apple Pay...");
+        alert("Pago con Apple Pay 🍎");
       }
 
-      // ✅ FINAL
-      setTimeout(() => {
-        alert("Pago completado ✅");
-      }, 800);
+      // 🔥 TODOS redirecionam
+      window.location.href = "../resumen-cesta/index.html";
 
-    });
+    };
 
   })
   .catch(err => {
