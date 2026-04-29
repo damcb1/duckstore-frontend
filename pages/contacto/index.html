@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Duck Contact</title>
 
   <link rel="stylesheet" href="./contacto.css">
@@ -10,157 +10,151 @@
 
 <body>
 
-<!--HEADER: Importado-->
-
-    <header id="header"></header>
-    
-    <script>
-        fetch('/header.html') 
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header').innerHTML = data;
-        });
-    </script>
+<!-- HEADER -->
+<header id="header"></header>
 
 <div class="page-content">
+  <div class="page">
 
-<div class="page">
+    <section class="hero">
+      <div class="container">
 
-  <section class="hero">
-    <div class="container">
+        <p class="label">GET IN TOUCH</p>
+        <h1>Talk to the Ducks</h1>
 
-      <p class="label">GET IN TOUCH</p>
-      <h1>Talk to the Ducks</h1>
+        <p class="desc">
+          Have a question about our premium rubber duck collections?
+          Whether it's a wholesale inquiry or just to say quack,
+          we're all ears (and wings).
+        </p>
 
-      <p class="desc">
-        Have a question about our premium rubber duck collections?
-        Whether it's a wholesale inquiry or just to say quack,
-        we're all ears (and wings).
-      </p>
-
-      <!-- IMAGE -->
-      <div class="duck-card">
-        <img src="../../assets/images/premium-rubber-duck.png" alt="duck">
-      </div>
-
-      <!-- FORM -->
-      <form class="form" action="success.html">
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" placeholder="Tell us what's on your beak..." required></textarea>
+        <!-- IMAGE -->
+        <div class="duck-card">
+          <img src="../../assets/images/premium-rubber-duck.png" alt="duck">
         </div>
 
-        <button type="submit">Send a Quack ➤</button>
-        <!-- Botón mailto directo -->
-      </form>
+        <!-- ✅ FORM COM VALORES DEFAULT -->
+        <form id="contactForm" class="form">
 
-      <a href="mailto:hola@quackandsplash.com" class="btn-mailto">Send a Quack ➤</a>
+          <div class="field">
+            <label>Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              value="Duck User"
+              required
+            >
+          </div>
 
-      <!-- MAP -->
-      <div class="card location">
-        <h3>📍 Duck Pond HQ</h3>
+          <div class="field">
+            <label>Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              value="duck@email.com"
+              required
+            >
+          </div>
 
-        <iframe
-          src="https://www.google.com/maps?q=Barcelona&output=embed"
-          width="100%"
-          height="200"
-          style="border:0; border-radius:12px;"
-          loading="lazy">
-        </iframe>
+          <div class="field">
+            <label>Message</label>
+            <textarea 
+              id="message" 
+              required
+            >I would like more information about your rubber ducks 🦆</textarea>
+          </div>
 
-        <p>123 Quackery Lane, Splashville 10001</p>
-      </div>
+          <button type="submit">Send a Quack ➤</button>
 
-      <!-- SOCIAL -->
-      <div class="card social">
-        <h3>Connect with the flock</h3>
+        </form>
 
-        <div class="icons">
+        <!-- MAP -->
+        <div class="card location">
+          <h3>📍 Duck Pond HQ</h3>
 
-          <!-- CONTACT (email) -->
-          <a href="mailto:hola@quackandsplash.com" class="icon-item active">
-            <div class="icon-circle">
-              <img src="../../assets/icons/email.svg" alt="Contact" width="40" height="40" />
-            </div>
-            <span>CONTACT</span>
+          <iframe
+            src="https://www.google.com/maps?q=Barcelona&output=embed"
+            width="100%"
+            height="200"
+            style="border:0; border-radius:12px;"
+            loading="lazy">
+          </iframe>
+
+          <p>123 Quackery Lane, Splashville 10001</p>
+        </div>
+
+        <!-- SOCIAL -->
+        <div class="card social">
+          <h3>Connect with the flock</h3>
+
+          <div class="icons">
+
+            <a href="mailto:hola@quackandsplash.com" class="icon-item active">
+              <div class="icon-circle">
+                <img src="../../assets/icons/email.svg" width="24">
+              </div>
+              <span>CONTACT</span>
             </a>
-          
-          <!-- FACEBOOK -->
-          <a href="https://www.facebook.com" target="_blank" class="icon-item">
-            <div class="icon-circle">
-              <img src="../../assets/icons/facebook.svg" alt="Facebook" width="40" height="40" />
-            </div>
-            <span>FACEBOOK</span>
-          </a>
+            
+            <a href="https://www.facebook.com" target="_blank" class="icon-item">
+              <div class="icon-circle">
+                <img src="../../assets/icons/facebook.svg" width="24">
+              </div>
+              <span>FACEBOOK</span>
+            </a>
 
-          <!-- INSTAGRAM -->
-          <a href="https://www.instagram.com/instagram/" target="_blank" class="icon-item">
-            <div class="icon-circle">
-              <img src="../../assets/icons/instagram.svg" alt="Instagram" width="40" height="40" />
-            </div>
-            <span>INSTAGRAM</span>
-          </a>
+            <a href="https://www.instagram.com" target="_blank" class="icon-item">
+              <div class="icon-circle">
+                <img src="../../assets/icons/instagram.svg" width="24">
+              </div>
+              <span>INSTAGRAM</span>
+            </a>
 
-          <!-- YOUTUBE -->
-          <a href="https://www.youtube.com" target="_blank" class="icon-item">
-            <div class="icon-circle">
-              <img src="../../assets/icons/youtube.svg" alt="YouTube" width="40" height="40" />
-            </div>
-            <span>YOUTUBE</span>
-          </a>
+            <a href="https://www.youtube.com" target="_blank" class="icon-item">
+              <div class="icon-circle">
+                <img src="../../assets/icons/youtube.svg" width="24">
+              </div>
+              <span>YOUTUBE</span>
+            </a>
 
+          </div>
+
+          <p>
+            <img src="../../assets/icons/contact-us.svg" width="18">
+            Mon - Fri, 9am - 5pm Quack Time
+          </p>
         </div>
 
-        <p>
-          <img src="../../assets/icons/contact-us.svg" alt="Support" width="20" height="20" style="vertical-align: middle;" /> Mon - Fri, 9am - 5pm Quacc Time</p>
       </div>
-
-    </div>
-  </section>
-
-</div>
-
-<!-- MODAL -->
-<div id="contactModal" class="modal">
-  <div class="modal-content">
-
-    <span class="close" onclick="closeModal()">✕</span>
-
-    <h3>Send us a message</h3>
-
-      <div class="field">
-    <label for="message">Message</label>
-    <textarea id="message" placeholder="Tell us what's on your beak..." required></textarea>
-  </div>
-  <button type="submit">Send a Quack ➤</button>
+    </section>
 
   </div>
 </div>
 
-<!-- SCRIPT -->
+<!-- FOOTER -->
+<footer id="footer"></footer>
+
+<!-- HEADER + FOOTER -->
 <script>
-  function openModal() {
-    document.getElementById("contactModal").style.display = "flex";
-  }
+document.addEventListener("DOMContentLoaded", function () {
 
-  function closeModal() {
-    document.getElementById("contactModal").style.display = "none";
-  }
+  fetch('../../header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+
+  fetch('../../footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+
+});
 </script>
 
-<!--FOOTER: Importado-->
-
-    <footer id="footer"></footer>
-    
-    <script>
-        fetch('/footer.html') 
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        });
-    </script>
-
-</div>
+<!-- JS FORM -->
+<script src="./contacto.js"></script>
 
 </body>
 </html>

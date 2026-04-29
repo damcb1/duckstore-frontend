@@ -60,3 +60,13 @@ img{
 body {
   padding-bottom: 80px; 
 }
+
+.bottom-nav .tab:nth-child(3) img {
+  width: 85px;
+  height: 85px;
+}
+
+.bottom-nav .tab:last-child img {
+  width: 40px;
+  height: 40px;
+}

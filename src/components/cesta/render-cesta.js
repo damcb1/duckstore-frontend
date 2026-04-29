@@ -58,7 +58,6 @@ function renderCesta() {
         €${(price * quantity).toFixed(2)}
       </div>
     `;
-
     container.appendChild(article);
   });
 
