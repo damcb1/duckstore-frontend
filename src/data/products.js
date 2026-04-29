@@ -5,7 +5,7 @@ export const products = [
     category: "voyager",
     series: "Voyager Series",
     price: 40,
-    img: "../../assets/images/Sailor-duck.png",
+    img: "/assets/images/Sailor-duck.png", // ✅
     alt: "The Sailor Duck",
     className: ""
   },
@@ -15,7 +15,7 @@ export const products = [
     category: "creative",
     series: "Creative Series",
     price: 45,
-    img: "../../assets/images/Artist-duck.png",
+    img: "/assets/images/Artist-duck.png", // ✅
     alt: "The Boutique Artist Duck",
     className: "card-alt"
   },
@@ -25,7 +25,7 @@ export const products = [
     category: "amazing",
     series: "Amazing Series",
     price: 38,
-    img: "../../assets/images/Techy-duck.png",
+    img: "/assets/images/Techy-duck.png", // ✅
     alt: "The Techy Duck",
     className: "card-yellow"
   },
@@ -35,7 +35,7 @@ export const products = [
     category: "voyager",
     series: "Voyager Series",
     price: 32,
-    img: "../../assets/images/Admiral-duck.png",
+    img: "/assets/images/Admiral-duck.png", // ✅
     alt: "The Admiral Duck",
     className: ""
   },
@@ -45,7 +45,7 @@ export const products = [
     category: "amazing",
     series: "Amazing Series",
     price: 32,
-    img: "../../assets/images/Party-duck.png",
+    img: "/assets/images/Party-duck.png", // ✅
     alt: "The Party Duck",
     className: ""
   },
@@ -55,7 +55,7 @@ export const products = [
     category: "voyager",
     series: "Voyager Series",
     price: 32,
-    img: "../../assets/images/Bikini-duck.png",
+    img: "/assets/images/Bikini-duck.png", // ✅
     alt: "The Bikini Duck",
     className: ""
   }
