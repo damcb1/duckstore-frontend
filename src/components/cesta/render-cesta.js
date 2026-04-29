@@ -1,10 +1,7 @@
 // ==============================
-// CESTA - RENDER + INTERACCIÓN PRO
+// CESTA - RENDER + INTERACCIÓN
 // ==============================
 
-// ------------------------------
-// STORAGE HELPERS
-// ------------------------------
 function getCesta() {
   return JSON.parse(localStorage.getItem("cesta")) || [];
 }
@@ -20,45 +17,35 @@ function renderCesta() {
   const container = document.getElementById("cart-container");
   const subtotalEl = document.getElementById("subtotal");
   const totalEl = document.getElementById("total");
-
   if (!container || !subtotalEl || !totalEl) return;
 
   const cesta = getCesta();
-
   container.innerHTML = "";
-
   let subtotal = 0;
 
   cesta.forEach((item, index) => {
-    const price = item.precio;
+    const price = item.price;         // ✅ era item.precio
     const quantity = item.cantidad || 1;
-
     subtotal += price * quantity;
 
     const article = document.createElement("article");
     article.classList.add("cart-item");
-
     article.innerHTML = `
-      <img src="${item.imagen}" alt="${item.nombre}">
-
+      <img src="${item.img}" alt="${item.name}">
       <div class="item-body">
-        <h3>${item.nombre}</h3>
-        <p class="item-series">${item.categoria || ""}</p>
-
+        <h3>${item.name}</h3>
+        <p class="item-series">${item.category || ""}</p>
         <div class="quantity">
           <button class="qty-btn" data-action="minus" data-index="${index}">-</button>
           <span class="qty-value">x${quantity}</span>
           <button class="qty-btn" data-action="plus" data-index="${index}">+</button>
-
           <button class="delete-btn" data-action="delete" data-index="${index}">🗑</button>
         </div>
       </div>
-
       <div class="item-price">
         €${(price * quantity).toFixed(2)}
       </div>
     `;
-
     container.appendChild(article);
   });
 
@@ -77,26 +64,18 @@ function attachEvents() {
     btn.addEventListener("click", () => {
       const action = btn.dataset.action;
       const index = Number(btn.dataset.index);
-
       let cesta = getCesta();
-
       if (!cesta[index]) return;
 
-      // ➕ SUMAR
       if (action === "plus") {
         cesta[index].cantidad = (cesta[index].cantidad || 1) + 1;
       }
-
-      // ➖ RESTAR (mínimo 1)
       if (action === "minus") {
         const current = cesta[index].cantidad || 1;
-
         if (current > 1) {
           cesta[index].cantidad = current - 1;
         }
       }
-
-      // 🗑 ELIMINAR
       if (action === "delete") {
         cesta.splice(index, 1);
       }
@@ -108,17 +87,14 @@ function attachEvents() {
 }
 
 // ------------------------------
-// MINI CART (NAVBAR COUNTER)
+// MINI CART COUNTER
 // ------------------------------
 function updateMiniCart() {
   const cesta = getCesta();
-
   const totalItems = cesta.reduce((acc, item) => {
     return acc + (item.cantidad || 1);
   }, 0);
-
   const counter = document.getElementById("cart-count");
-
   if (counter) {
     counter.textContent = totalItems;
   }
@@ -128,9 +104,7 @@ function updateMiniCart() {
 // SINCRONIZACIÓN ENTRE PESTAÑAS
 // ------------------------------
 window.addEventListener("storage", (e) => {
-  if (e.key === "cesta") {
-    renderCesta();
-  }
+  if (e.key === "cesta") renderCesta();
 });
 
 // ------------------------------
