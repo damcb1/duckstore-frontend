@@ -1,105 +1,58 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+    <head>
+        <script src="../../src/data/cesta.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <script src="/assets/js/navbar.js" defer></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-  </style>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
-  <title>Quack & Splash</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/galeria.css">
-</head>
+    <title>The Duck Gallery - Quack & Splash</title>
 
-<!-- HEADER--->
+    <!--Fuentes: Plus Jakarta Sans + Be Vietnam Pro-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,700&family=Be+Vietnam+Pro:wght@400;500&display=swap" rel="stylesheet" />
+   
+    <link rel="stylesheet" href="style.css" />
+    </head>
 
 <body>
+    <!--HEADER: Importado-->
 
- <header id="header"></header>
-<header class="header">
- <!-- <button class="icon-btn">
-  <svg viewBox="0 0 24 24" class="icon">
-      <path d="M10 18a8 8 0 1 1 5.3-14.1A8 8 0 0 1 10 18zm11 3-6-6"/>
-    </svg>
-  </button>-->
+    <header id="header"></header>
+    
+    <script>
+        fetch('/header.html') 
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+    </script>
+    
+    <!--MAIN: Galería de productos-->
 
-  <div class="header-left"></div>
+    <div class="page-content">
 
-  <div class="header-title plus-jakarta-sans-fonts-google">
-    Quack & Splash
-  </div>
-
-
-  <button class="icon-btn cart-btn">
-   <a href="/pages/cesta/"><img src="/assets/icons/carrito-header.png" alt="Cart" class="icon" /></a> 
-    <span id="cart-count">0</span>
-  </button>
-</header>
-
-  <main class="container">
-
-    <section class="hero">
-     
-    <div class="hero-text">
-
-      <span class="badge">PREMIUM RUBBER DUCKS</span>
-      <h1>Elevate Your <br><span>Bath Time</span></h1>
-      <p class="hero-subtitle">
-        Discover the world's most sophisticated rubber duck collection.
-      </p>
-
-      <div class="buttons">
-        <a href="/pages/catalogo-productos/"  class="btn primary">Shop The Collection →</a>
-        <a href="#our-story" class="btn secondary">Our Story</a>
-      </div>
-    </div>
-
-      <div class="card">
-        <img src="../assets/images/Techy-duck.png" alt="Techy Duck">
-      </div>
-    </section>
-
-    <section class="mission" id="our-story">
-      <p class="mission-subtitle">OUR PHILOSOPHY</p>
-      <h2>The Quack Mission</h2>
-      <div class="quote-box">
-        <p>"We believe that a single moment of buoyancy can change your entire day."</p>
-      </div>
-
-      <div class="features">
-        <div class="feature">
-          <div class="feature-icon-circle yellow">✨</div>
-          <div>
-            <h3>Curated Joy</h3>
-            <p>Hand-selected for personality and quality.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon-circle blue">💧</div>
-          <div>
-            <h3>Conscious Materials</h3>
-            <p>BPA-free, sustainable rubber compounds.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-      <!--MAIN: Galería de productos-->
     <main class="gallery-page">
-      <!---- <section class="gallery-header">
+        <section class="gallery-header">
             <p class="gallery-header-label">Curated Collection</p>
             <h1 class="gallery-header-title">The Duck <em>Gallery</em></h1>
-        </section>-->
+        </section>
 
-    <!--PRODUCTS: Featured card
+        <div class="filters">
+            <button class="filter-btn" id="filterBtn">
+                <img src="../../assets/icons/filter.svg" alt="" class="filter-icon" />
+                Filter
+            </button>
+
+            <div class="filter-menu hidden" id="filterMenu">
+                <button data-category="all">All</button>
+                <button data-category="voyager">Voyager</button>
+                <button data-category="creative">Creative</button>
+                <button data-category="amazing">Amazing</button>
+            </div>
+        </div>
+
+    <!--PRODUCTS: Featured card-->
 
         <article class="card card-featured">
         <span class="card-badge">Limited Edition</span>
@@ -111,13 +64,17 @@
         </div>
 
         <div class="card-featured-img-wrap">
+            <a href="/pages/product-page/">
             <img src="../../assets/images/Golden-rubber-duck.png" alt="Golden Ducky - edición limitada" class="card-img"/>
+            </a>
         </div>
-        </article>-->
+        </article>
 
-         <!--<section class="product-grid">
+        <section class="product-grid" id="product-grid">
+        </section>
         
-       ----------------PRODUCTS: Card 1
+        <!-- CARDS OCULTAS POR REEMPLAZO CON JS 
+            PRODUCTS: Card 1
 
             <article class="card card-secondary">
                 <div class="card-img-wrap">
@@ -132,8 +89,8 @@
                     </div>
                 </div>
             </article>
--->
-        <!--PRODUCTS: Card 2
+
+        PRODUCTS: Card 2
 
             <article class="card card-secondary card-alt">
                 <div class="card-img-wrap">
@@ -148,9 +105,9 @@
                     </div>
                     
                 </div>
-            </article>-->
+            </article>
         
-        <!--PRODUCTS: Card 3
+        PRODUCTS: Card 3
 
             <article class="card card-secondary card-yellow">
                 <div class="card-img-wrap">
@@ -165,10 +122,9 @@
                     </div>
                     
                 </div>
-            </article>-->
+            </article>
 
-        <!--PRODUCTS: Card 4-->
-<section class="product-grid">
+       PRODUCTS: Card 4
 
             <article class="card card-secondary">
                 <div class="card-img-wrap">
@@ -185,9 +141,9 @@
                 </div>
             </article>
 
-        <!--PRODUCTS: Card 5-->
+        PRODUCTS: Card 5
             
-            <article class="card card-secondary card-yellow">
+            <article class="card card-secondary">
                 <div class="card-img-wrap">
                     <img src="../../assets/images/Party-duck.png" alt="The Party Duck" class="card-img">
                 </div>
@@ -202,9 +158,9 @@
                 </div>
             </article>
 
-        <!--PRODUCTS: Card 6-->
+        PRODUCTS: Card 6
             
-            <article class="card card-secondary card-yellow">
+            <article class="card card-secondary">
                 <div class="card-img-wrap">
                     <img src="../../assets/images/Bikini-duck.png" alt="The Bikini Duck" class="card-img">
                 </div>
@@ -222,30 +178,23 @@
         </section>
 
     </main>
-    <!---   INICIO FOOTER ---->
-   <nav class="bottom-nav">
+    
+    CARDS OCULTAS POR REEMPLAZO CON JS -->
 
-  <button class="tab active">
-    <a href="/home/content.html">
-    <img src="/assets/icons/home.svg" alt="home"></a>
-  </button>
+    <!--FOOTER: Importado-->
 
-  <button class="tab"><a href="/pages/catalogo-productos/">
-    <img src="/assets/icons/shop.svg" alt="shop"></a>
-  </button>
+    <footer id="footer"></footer>
+    
+    <script>
+        fetch('/footer.html') 
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+    </script>
 
-  <button class="tab"><a href="/pages/contacto/">
-    <img src="/assets/icons/contacto.svg" alt="contacto"></a>
-  </button>
-   <button class="tab"><a href="/pages/cesta/">
-    <img src="/assets/icons/carrito-footer.svg" alt="contacto"></a>
-  </button>
+    <script type="module" src="../../src/components/catalog/render-catalog.js"></script>
 
-</nav>
-    <!---TERMINA EL FOOTER ---->
-
-
-
+</div>
 </body>
-
 </html>

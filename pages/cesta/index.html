@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Cart - Quack & Splash</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Be+Vietnam+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/pages/cesta/css/style.css">
+
+    <!-- JS al final del head o mejor en body -->
+    <script type="module" src="../../src/components/cesta/render-cesta.js" defer></script>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <header>
+      <!-- NAVBAR -->
+    </header>
+
+    <!-- MAIN -->
+      
+    <main class="cart-container">
+
+      <div class="cart-eyebrow">Your Premium Selection</div>
+
+      <div class="cart-header-row">
+        <h1>Your Cart</h1>
+        <span class="items-count">OBJECTS OF JOY</span>
+      </div>
+
+      <!-- 🔥 AQUÍ SE RENDERIZA TODO EL CARRITO -->
+      <section class="cart-layout" aria-label="Shopping cart layout">
+
+        <!-- CART ITEMS (JS inyecta aquí las cards) -->
+       <div id="cart-container" class="cart-items"></div>
+
+        <!-- ORDER SUMMARY -->
+        <aside class="order-summary" aria-label="Order summary">
+
+          <h2>Order Summary</h2>
+
+          <div class="summary-rows">
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="subtotal">€0.00</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span>€4.90</span>
+            </div>
+          </div>
+
+          <div class="summary-total">
+            <span>Total</span>
+            <span id="total">€0.00</span>
+          </div>
+
+          <button class="checkout-btn">CHECKOUT</button>
+          <button class="continue-btn">CONTINUE SHOPPING</button>
+
+          <div class="badges">
+            <span class="badge-item">Secure</span>
+            <span class="badge-item">Fast</span>
+            <span class="badge-item">Eco</span>
+          </div>
+
+        </aside>
+
+      </section>
+
+      <!-- ECO BOX -->
+      <div class="eco-box" aria-label="Sustainability info">
+        <p>100% Recyclable PVC-Free</p>
+        <small>Every duck contributes to ocean cleanup initiatives.</small>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <!-- FOOTER -->
+    </footer>
+
+  </body>
+</html>
