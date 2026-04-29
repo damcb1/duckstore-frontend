@@ -1,200 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script src="../../src/data/cesta.js"></script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
 
-    <title>The Duck Gallery - Quack & Splash</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Duck Gallery - Quack & Splash</title>
 
-    <!--Fuentes: Plus Jakarta Sans + Be Vietnam Pro-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,700&family=Be+Vietnam+Pro:wght@400;500&display=swap" rel="stylesheet" />
-   
-    <link rel="stylesheet" href="style.css" />
-    </head>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Be+Vietnam+Pro:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
 
 <body>
-    <!--HEADER: Importado-->
 
-    <header id="header"></header>
-    
-    <script>
-        fetch('/header.html') 
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header').innerHTML = data;
-        });
-    </script>
-    
-    <!--MAIN: Galería de productos-->
+<!-- HEADER -->
+<header id="header"></header>
 
-    <div class="page-content">
+<script>
+  fetch('../../header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
 
-    <main class="gallery-page">
-        <section class="gallery-header">
-            <p class="gallery-header-label">Curated Collection</p>
-            <h1 class="gallery-header-title">The Duck <em>Gallery</em></h1>
-        </section>
+<div class="page-content">
 
-        <div class="filters">
-            <button class="filter-btn" id="filterBtn">
-                <img src="../../assets/icons/filter.svg" alt="" class="filter-icon" />
-                Filter
-            </button>
+<main class="gallery-page">
 
-            <div class="filter-menu hidden" id="filterMenu">
-                <button data-category="all">All</button>
-                <button data-category="voyager">Voyager</button>
-                <button data-category="creative">Creative</button>
-                <button data-category="amazing">Amazing</button>
-            </div>
-        </div>
+  <!-- HEADER -->
+  <section class="gallery-header">
+    <p class="gallery-header-label">Curated Collection</p>
+    <h1 class="gallery-header-title">The Duck <em>Gallery</em></h1>
+  </section>
 
-    <!--PRODUCTS: Featured card-->
+  <!-- FILTER -->
+  <div class="filters">
+    <button class="filter-btn" id="filterBtn">
+      <img src="../../assets/icons/filter.svg" class="filter-icon" alt="filter icon"/>
+      Filter
+    </button>
 
-        <article class="card card-featured">
-        <span class="card-badge">Limited Edition</span>
+    <div class="filter-menu hidden" id="filterMenu">
+      <button data-category="all">All</button>
+      <button data-category="voyager">Voyager</button>
+      <button data-category="creative">Creative</button>
+      <button data-category="amazing">Amazing</button>
+    </div>
+  </div>
 
-        <div class="card-featured-info">
-            <h2 class="card-featured-name">Golden Ducky</h2>
-            <p class="card-featured-desc">24k Matte Finish Premium Collector's Piece. A masterpiece of craftmanship for the discerning enthusiast.</p>
-            <p class="card-featured-price">€124.00</p>
-        </div>
+  <!-- FEATURED -->
+  <article class="card card-featured">
 
-        <div class="card-featured-img-wrap">
-            <a href="/pages/product-page/">
-            <img src="../../assets/images/Golden-rubber-duck.png" alt="Golden Ducky - edición limitada" class="card-img"/>
-            </a>
-        </div>
-        </article>
+    <span class="card-badge">Limited Edition</span>
 
-        <section class="product-grid" id="product-grid">
-        </section>
-        
-        <!-- CARDS OCULTAS POR REEMPLAZO CON JS 
-            PRODUCTS: Card 1
+    <div class="card-featured-info">
 
-            <article class="card card-secondary">
-                <div class="card-img-wrap">
-                    <img src="../../assets/images/Sailor-duck.png" alt="The Sailor Duck" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-name">The Sailor Duck</h3>
+      <h2 class="card-featured-name">Golden Ducky</h2>
 
-                    <div class="card-footer">
-                        <p class="card-series">Voyager Series</p>
-                        <span class="card-price">€40</span>
-                    </div>
-                </div>
-            </article>
+      <p class="card-featured-desc">
+        24k Matte Finish Premium Collector's Piece.
+        A masterpiece of craftsmanship for the discerning enthusiast.
+      </p>
 
-        PRODUCTS: Card 2
+      <!-- 🔥 BLOCO CORRIGIDO -->
+      <div class="price-buy-wrapper">
 
-            <article class="card card-secondary card-alt">
-                <div class="card-img-wrap">
-                    <img src="../../assets/images/Artist-duck.png" alt="The Boutique Artist Duck" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-name">The Boutique Artist</h3>
+        <span class="card-featured-price">€124.00</span>
 
-                    <div class="card-footer">
-                        <p class="card-series">Creative Series</p>
-                        <span class="card-price">€45</span>
-                    </div>
-                    
-                </div>
-            </article>
-        
-        PRODUCTS: Card 3
+        <!-- ⚠️ AGORA USA A CLASSE CERTA -->
+        <a href="../product-page/index.html" class="buy-btn">
+          Buy Golden Duck
+        </a>
 
-            <article class="card card-secondary card-yellow">
-                <div class="card-img-wrap">
-                    <img src="../../assets/images/Techy-duck.png" alt="The Techy Duck" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-name">The Techy Duck</h3>
+      </div>
 
-                    <div class="card-footer">
-                        <p class="card-series">Amazing Series</p>
-                        <span class="card-price">€38</span>
-                    </div>
-                    
-                </div>
-            </article>
+    </div>
 
-       PRODUCTS: Card 4
+    <div class="card-featured-img-wrap">
+      <a href="../product-page/index.html">
+        <img 
+          src="../../assets/images/Golden-rubber-duck.png" 
+          class="card-img"
+          alt="Golden Duck"
+        />
+      </a>
+    </div>
 
-            <article class="card card-secondary">
-                <div class="card-img-wrap">
-                    <img src="../../assets/images/Admiral-duck.png" alt="The Admiral Duck" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-name">The Admiral Duck</h3>
+  </article>
 
-                    <div class="card-footer">
-                        <p class="card-series">Voyager Series</p>
-                        <span class="card-price">€32</span>
-                    </div>
-                    
-                </div>
-            </article>
+  <!-- GRID -->
+  <section class="product-grid" id="product-grid"></section>
 
-        PRODUCTS: Card 5
-            
-            <article class="card card-secondary">
-                <div class="card-img-wrap">
-                    <img src="../../assets/images/Party-duck.png" alt="The Party Duck" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-name">The Party Duck</h3>
-
-                    <div class="card-footer">
-                        <p class="card-series">Amazing Series</p>
-                        <span class="card-price">€32</span>
-                    </div>
-                    
-                </div>
-            </article>
-
-        PRODUCTS: Card 6
-            
-            <article class="card card-secondary">
-                <div class="card-img-wrap">
-                    <img src="../../assets/images/Bikini-duck.png" alt="The Bikini Duck" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-name">The Bikini Duck</h3>
-
-                    <div class="card-footer">
-                        <p class="card-series">Voyager Series</p>
-                        <span class="card-price">€32</span>
-                    </div>
-                    
-                </div>
-            </article>
-
-        </section>
-
-    </main>
-    
-    CARDS OCULTAS POR REEMPLAZO CON JS -->
-
-    <!--FOOTER: Importado-->
-
-    <footer id="footer"></footer>
-    
-    <script>
-        fetch('/footer.html') 
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        });
-    </script>
-
-    <script type="module" src="../../src/components/catalog/render-catalog.js"></script>
+</main>
 
 </div>
+
+<!-- FOOTER -->
+<footer id="footer"></footer>
+
+<script>
+  fetch('../../footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+
+<script type="module" src="../../src/components/catalog/render-catalog.js"></script>
+<script type="module" src="../../src/components/catalog/filter-catalog.js"></script>
+
 </body>
 </html>
