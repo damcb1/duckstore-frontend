@@ -1,30 +1,20 @@
-<<<<<<< HEAD
 let selectedMethod = "card"; // 🔥 método padrão
 
-=======
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
 export const renderMethods = (methods) => {
   const container = document.getElementById("paymentMethods");
 
   container.innerHTML = methods.map(method => {
 
-<<<<<<< HEAD
     // 💳 CARD
     if (method.id === "card") {
       return `
         <div class="payment-card active" data-type="card">
-=======
-    if (method.id === "card") {
-      return `
-        <div class="payment-card active">
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
 
           <div class="card-header">
             <span class="radio active"></span>
             <h3>${method.name}</h3>
           </div>
 
-<<<<<<< HEAD
           <div class="payment-content">
 
             <div class="field">
@@ -49,35 +39,12 @@ export const renderMethods = (methods) => {
               <input value="Duck User" />
             </div>
 
-=======
-          <div class="field">
-            <label>NÚMERO DE TARJETA</label>
-            <input placeholder="0000 0000 0000 0000" />
-          </div>
-
-          <div class="row">
-            <div class="field">
-              <label>VENCIMIENTO</label>
-              <input placeholder="MM/YY" />
-            </div>
-
-            <div class="field">
-              <label>CVV</label>
-              <input placeholder="***" />
-            </div>
-          </div>
-
-          <div class="field">
-            <label>NOMBRE EN LA TARJETA</label>
-            <input placeholder="TITULAR DE LA TARJETA" />
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
           </div>
 
         </div>
       `;
     }
 
-<<<<<<< HEAD
     // 💰 OUTROS MÉTODOS
     return `
       <div class="payment-option" data-type="${method.id}">
@@ -183,13 +150,3 @@ export const renderMethods = (methods) => {
 
 // 🔥 export
 export const getSelectedMethod = () => selectedMethod;
-=======
-    return `
-      <div class="payment-option">
-        <span class="radio"></span>
-        ${method.name}
-      </div>
-    `;
-  }).join("");
-};
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
