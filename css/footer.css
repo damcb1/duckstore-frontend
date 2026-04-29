@@ -1,7 +1,14 @@
 /* =========================
 FOOTER - FIX VISUAL REAL
 ========================= */
-
+.icon-btn svg {
+  width: 79px;
+  height: auto;
+}
+img{
+  width: 79px;
+  height: auto;
+}
 .bottom-nav {
     position: fixed;
     bottom: 16px;
