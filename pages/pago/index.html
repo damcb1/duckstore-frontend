@@ -3,11 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <title>Método de Pago</title>
+<<<<<<< HEAD
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../css/style.css">
+=======
+>>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
+<<<<<<< HEAD
+  <!-- HEADER -->
+  <div id="header"></div>
+
+  <div class="page-content">
+    <main class="page">
+
+      <h1>Método de Pago</h1>
+
+      <div id="paymentMethods"></div>
+      <div id="summary"></div>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <!-- JS -->
+  <script type="module" src="./js/main.js"></script>
+
+  <!-- HEADER / FOOTER -->
+  <script>
+    fetch("../../header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+
+    fetch("../../footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+=======
   <div id="header"></div>
 
   <main class="page">
@@ -31,6 +73,7 @@
     fetch("../../footer.html")
       .then(res => res.text())
       .then(data => document.getElementById("footer").innerHTML = data);
+>>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
   </script>
 
 </body>
