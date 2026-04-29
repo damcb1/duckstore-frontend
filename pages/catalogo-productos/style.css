@@ -4,6 +4,7 @@ body {
     background: white;
 }
 
+/* PAGE */
 .gallery-page {
     max-width: 480px;
     margin: 0 auto;
@@ -35,47 +36,36 @@ body {
 }
 
 /* -----FILTRO----- */
+
 .filters {
   position: relative;
   display: inline-block;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .filter-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
+  gap: 10px;
+  padding: 10px 18px;
   border-radius: 999px;
   border: 1.5px solid #e0d9a8;
   background: #ffffff;
-  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #3d3905;
   cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: 0.2s;
 }
 
 .filter-btn:hover {
   background: #fffae1;
-  border-color: #c5b94a;
-}
-
-.filter-btn.active {
-  background: #3d3905;
-  color: #fffae1;
-  border-color: #3d3905;
-}
-
-.filter-btn.active .filter-icon {
-  filter: brightness(0) invert(1);
+  transform: translateY(-1px);
 }
 
 .filter-icon {
-  width: 16px;
-  height: 16px;
-  opacity: 0.75;
+  width: 20px;
+  height: 20px;
 }
 
 .filter-menu {
@@ -85,118 +75,134 @@ body {
   background: white;
   border-radius: 16px;
   padding: 8px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1), 0 2px 8px rgba(0,0,0,0.06);
   display: flex;
   flex-direction: column;
   gap: 2px;
   min-width: 140px;
   z-index: 100;
-  border: 1px solid #f0ead8;
-}
-
-.filter-menu button {
-  background: none;
-  border: none;
-  padding: 10px 14px;
-  cursor: pointer;
-  text-align: left;
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #3d3905;
-  border-radius: 10px;
-  transition: background 0.15s ease;
-}
-
-.filter-menu button:hover {
-  background: #fffae1;
-}
-
-.filter-menu button.active-filter {
-  background: #3d3905;
-  color: #fffae1;
 }
 
 .hidden {
   display: none;
 }
 
-/* -----FEATURED CARD----- */
+/* -----FEATURED CARD (GOLDEN)----- */
 
 .card-featured {
     background: #fffae1;
     border-radius: 32px;
-    padding: 24px 16px;
+
+    padding: 32px 20px; /* 🔥 melhor proporção */
+    max-width: 900px;   /* 🔥 limita tamanho */
+    margin: 0 auto;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 16px;
-} 
+    gap: 14px;
+}
 
+/* badge */
 .card-badge {
     padding: 4px 14px;
     border-radius: 999px;
     background: #3d3905;
     color: #fffae1;
     font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: -32px;
 }
 
+/* título */
 .card-featured-name {
     font-family: 'Plus Jakarta Sans';
-    font-size: 42px;
+    font-size: 36px; /* 🔥 menor */
     font-weight: 700;
     color: #3d3905;
 }
 
+/* descrição */
 .card-featured-desc {
     font-size: 14px;
     color: #6b6b6b;
-    line-height: 1.6;
-    max-width: 300px;
-    margin: -24px auto 0;
-    text-align: center;
+    max-width: 500px;
 }
 
+/* 🔥 PREÇO MELHORADO */
 .card-featured-price {
-    font-family: 'Plus Jakarta Sans';
-    font-size: 28px;
-    font-weight: 700;
-    color: #3d3905;
-    background: #f4f1dc;
-    padding: 12px 24px;
-    border-radius: 999px;      
+  font-size: 20px; /* 🔥 destaque */
+  font-weight: 800;
+  color: #3d3905;
+
+  background: #fff3c4;
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+/* 🔥 PREÇO + BOTÃO */
+.price-buy-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+  margin-top: 18px;
+
+  flex-wrap: wrap;
+}
+
+/* botão */
+.card-featured .buy-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 26px;
+  border-radius: 999px;
+
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+
+  color: #fff;
+  text-decoration: none;
+
+  background: linear-gradient(135deg, #b8890a, #ffd84d, #c9a000);
+  background-size: 200% 200%;
+
+  box-shadow:
+    0 6px 20px rgba(200,150,0,0.35),
+    inset 0 1px 1px rgba(255,255,255,0.3);
+
+  transition: all 0.3s ease;
+
+  overflow: hidden;
+}
+
+.card-featured .buy-btn:hover {
+    background: #a07a00;
+    transform: translateY(-2px);
+}
+
+/* 🔥 IMAGEM CONTROLADA */
 .card-featured-img-wrap {
-    width: 100%;    
-    border-radius: 24px;
-    padding: 16px;
-    margin-top: -12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 10px;
 }
 
-.card-featured-img-wrap .card-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+.card-featured-img-wrap img {
+  width: 100%;
+  height: auto;
+
+  max-height: 320px; /* 🔥 controla tamanho */
+  object-fit: contain;
 }
 
-.card-featured .card-img {
-    transition: transform 0.5s ease;
-}
-
-.card-featured:hover .card-img {
-    transform: scale(1.12);
-}
-
-/* -----CARD----- */
+/* -----CARDS----- */
 
 .card {
     border-radius: 24px;
@@ -207,73 +213,51 @@ body {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.05);    
-}
-
-.card-alt {
-    background-color: #fefae1;
-}
-
-.card-yellow {
-    background-color: #f5eda0;
-}
-
-.card-img-wrap {
-    overflow: hidden;
-    background-color: transparent;
-    line-height: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
 }
 
 .card-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.35s ease;
+    transition: transform 0.3s;
 }
 
 .card-secondary:hover .card-img {
-    transform: scale(1.12);
+    transform: scale(1.1);
 }
-
-/* -----CONTENIDO CARD----- */
 
 .card-body {
     padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.card-name {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: #1a1a1a;
-    line-height: 1.2;
-}
-
-.card-price {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: #0068a8;
-    white-space: nowrap;
-    margin-top: 4px;
-}
-
-.card-series {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 12px;
-    color: #6b6b6b;
 }
 
 .card-footer {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    margin-top: 4px;
 }
+
+/* botão grid */
+.card-secondary button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+
+    border-radius: 8px;
+    border: 1px solid #ddd;
+
+    background: #f5f5f5;
+    color: #333;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card-secondary button:hover {
+    background: #ececec;
+}
+
+/* GRID */
 
 .product-grid {
     display: grid;
@@ -286,32 +270,22 @@ body {
   margin-top: 80px;
 }
 
+/* -----RESPONSIVE----- */
+
 @media (min-width: 768px) {
 
-.gallery-page {
-    max-width: 1100px;
-    padding: 48px 32px;
-} 
+  .gallery-page {
+      max-width: 1100px;
+      padding: 48px 32px;
+  }
 
-.product-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
+  .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+  }
 
-.gallery-header-title {
-    font-size: 64px;
-}
-
-.gallery-header {
-    margin-bottom: 32px;
-}
-
-.card-featured-name {
-    font-size: 48px;
-}
-
-.page-content {
-    margin-top: 40px;
-}
+  .gallery-header-title {
+      font-size: 64px;
+  }
 
 }
