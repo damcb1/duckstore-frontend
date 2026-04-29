@@ -31,4 +31,4 @@ export function renderProducts(list) {
 }
 
 renderProducts(products);
-//updateCartCounter();
+updateCartCounter();
