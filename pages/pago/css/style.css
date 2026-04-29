@@ -1,21 +1,4 @@
 /* =========================
-<<<<<<< HEAD
-   RESET
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* =========================
-   BASE
-========================= */
-body {
-  font-family: Arial, sans-serif;
-  background: #ffffff;
-  color: #3b3b00;
-=======
    BASE
 ========================= */
 * {
@@ -41,27 +24,15 @@ body {
   max-width: 360px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   font-weight: bold;
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
 }
 
 /* =========================
    PAGE
 ========================= */
-<<<<<<< HEAD
-.page-content {
-  padding-top: 80px;
-}
-
-.page {
-  max-width: 430px;
-  margin: 0 auto;
-  padding: 20px 20px 80px; /* 🔥 espaço pro footer */
-=======
 .page {
   max-width: 360px;
   margin: auto;
   padding: 0 15px 20px;
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
 }
 
 /* =========================
@@ -69,12 +40,7 @@ body {
 ========================= */
 h1 {
   font-size: 26px;
-<<<<<<< HEAD
-  margin-bottom: 20px;
-  margin-top: 10px;
-=======
   margin: 10px 0 20px;
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
 }
 
 h2 {
@@ -86,16 +52,6 @@ h2 {
    PAYMENT CARD
 ========================= */
 .payment-card {
-<<<<<<< HEAD
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 18px;
-  margin-bottom: 16px;
-
-  border: 2px solid #FFD709;
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-=======
   width: 100%;
   max-width: 100%;
   margin: 0 auto 25px;
@@ -103,7 +59,6 @@ h2 {
   border: 2px solid #e6c200;
   border-radius: 22px;
   background: #fdf4d7;
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
 }
 
 /* =========================
@@ -113,19 +68,11 @@ h2 {
   display: flex;
   align-items: center;
   gap: 10px;
-<<<<<<< HEAD
-  margin-bottom: 18px;
-}
-
-.card-header h3 {
-  font-size: 15px;
-=======
   margin-bottom: 15px;
 }
 
 .card-header h3 {
   font-size: 16px;
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
   font-weight: 600;
 }
 
@@ -133,17 +80,6 @@ h2 {
    RADIO
 ========================= */
 .radio {
-<<<<<<< HEAD
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 2px solid #cfcfcf;
-}
-
-.radio.active {
-  background: #FFD709;
-  border-color: #FFD709;
-=======
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -153,7 +89,6 @@ h2 {
 .radio.active {
   background: #e6c200;
   border-color: #e6c200;
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
 }
 
 /* =========================
@@ -166,37 +101,19 @@ h2 {
 .field label {
   font-size: 11px;
   letter-spacing: 0.5px;
-<<<<<<< HEAD
-  color: #6b662f;
-  display: block;
-  margin-bottom: 5px;
-  text-align: left;
-=======
   color: #7a7a7a;
   display: block;
   margin-bottom: 5px;
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
 }
 
 .field input {
   width: 100%;
-<<<<<<< HEAD
-  padding: 14px 16px;
-  border-radius: 20px;
-  border: none;
-
-  background: #FFFAE1;
-  font-size: 14px;
-
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
-=======
   padding: 12px 14px;
   border-radius: 18px;
   border: none;
   background: #f3e4b5;
   font-size: 14px;
   outline: none;
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
 }
 
 /* =========================
@@ -209,25 +126,6 @@ h2 {
 
 .row .field {
   flex: 1;
-<<<<<<< HEAD
-  min-width: 0;
-}
-
-/* =========================
-   PAYMENT OPTIONS
-========================= */
-.payment-option {
-  background: #FFFAE1;
-  border-radius: 20px;
-  padding: 16px;
-  margin-bottom: 12px;
-
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  font-size: 14px;
-=======
   min-width: 0; /* 👈 evita quebrar layout */
 }
 
@@ -244,24 +142,12 @@ h2 {
   align-items: center;
   gap: 10px;
   font-weight: 500;
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
 }
 
 /* =========================
    SUMMARY
 ========================= */
 #summary {
-<<<<<<< HEAD
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 20px;
-  margin-top: 20px;
-
-  box-shadow: 0 12px 25px rgba(0,0,0,0.06);
-}
-
-/* ITEM */
-=======
   background: white;
   padding: 20px;
   border-radius: 25px;
@@ -272,7 +158,6 @@ h2 {
 /* =========================
    SUMMARY ITEM
 ========================= */
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
 .summary-item {
   display: flex;
   align-items: center;
@@ -291,26 +176,6 @@ h2 {
   font-weight: 600;
 }
 
-<<<<<<< HEAD
-/* TOTAL */
-.total {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.total h3 {
-  font-size: 16px;
-  color: #777;
-  font-weight: 500;
-}
-
-.total span {
-  font-size: 22px;
-  font-weight: 800;
-  color: #a88c00;
-=======
 /* =========================
    TOTAL
 ========================= */
@@ -320,7 +185,6 @@ h2 {
 
 .total h3 {
   font-size: 20px;
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
 }
 
 /* =========================
@@ -329,48 +193,6 @@ h2 {
 button {
   width: 100%;
   padding: 16px;
-<<<<<<< HEAD
-
-  border-radius: 30px;
-  border: none;
-
-  background: linear-gradient(90deg, #776300, #FFD709);
-  color: white;
-
-  font-weight: 700;
-  font-size: 15px;
-
-  margin-top: 25px;
-
-  box-shadow: 0 6px 15px rgba(200,160,0,0.4);
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-/* =========================
-   FOOTER SPACE
-========================= */
-footer {
-  margin-top: 40px; /* 🔥 separa do conteúdo */
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (min-width: 768px) {
-
-  .page {
-    max-width: 700px;
-  }
-
-  #paymentMethods,
-  #summary {
-    margin-top: 20px;
-  }
-
-=======
   background: linear-gradient(to right, #cfa700, #f5d000);
   border: none;
   border-radius: 30px;
@@ -400,5 +222,4 @@ footer {
   .page {
     padding: 0 15px 20px;
   }
->>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
 }
