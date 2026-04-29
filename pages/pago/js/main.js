@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import { renderMethods, getSelectedMethod } from './payment-methods.js';
 import { renderSummary } from './summary.js';
 
 fetch('./data/payment.json')
+=======
+import { renderMethods } from './payment-methods.js';
+import { renderSummary } from './summary.js';
+
+fetch('./data/payment.json') // 👈 CORRETO
+>>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
   .then(res => {
     if (!res.ok) {
       throw new Error("Error cargando JSON");
@@ -9,6 +16,7 @@ fetch('./data/payment.json')
     return res.json();
   })
   .then(data => {
+<<<<<<< HEAD
 
     renderMethods(data.methods);
     renderSummary(data.cart);
@@ -44,6 +52,10 @@ fetch('./data/payment.json')
 
     };
 
+=======
+    renderMethods(data.methods);
+    renderSummary(data.cart);
+>>>>>>> a947101374be23c246cd8399076c0bc438c6c4ef
   })
   .catch(err => {
     console.error("ERROR:", err);
