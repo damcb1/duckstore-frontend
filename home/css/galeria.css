@@ -118,6 +118,25 @@ body {
     overflow: hidden;
     background-color: #ffffff;
 }
+/* botão grid */
+.card-secondary button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+
+    border-radius: 8px;
+    border: 1px solid #ddd;
+
+    background: #f5f5f5;
+    color: #333;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
 
 .card-secondary {
     background-color: #ffffff;
