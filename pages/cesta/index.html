@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Your Cart - Quack & Splash</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Be+Vietnam+Pro:wght@400;500&display=swap" rel="stylesheet">
@@ -15,10 +14,17 @@
 
   <body>
 
-    <!-- HEADER -->
-    <header>
-      <!-- NAVBAR -->
-    </header>
+    <!--HEADER: Importado-->
+
+    <header id="header"></header>
+    
+    <script>
+        fetch('/header.html') 
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+    </script>
 
     <!-- MAIN -->
       
@@ -59,8 +65,8 @@
             <span id="total">€0.00</span>
           </div>
 
-          <button class="checkout-btn">CHECKOUT</button>
-          <button class="continue-btn">CONTINUE SHOPPING</button>
+          <a href="../pago/index.html" class="checkout-btn">CHECKOUT</a>
+          <a href="../catalogo-productos/index.html" class="continue-btn">CONTINUE SHOPPING</a>
 
           <div class="badges">
             <span class="badge-item">Secure</span>
@@ -80,10 +86,17 @@
 
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-      <!-- FOOTER -->
-    </footer>
+<!--FOOTER: Importado-->
+
+    <footer id="footer"></footer>
+    
+    <script>
+        fetch('/footer.html') 
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+    </script>
 
   </body>
 </html>
