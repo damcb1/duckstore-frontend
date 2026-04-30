@@ -4,6 +4,8 @@ import { products } from "../../data/products.js"
 const filterBtn = document.querySelector("#filterBtn");
 const filterMenu = document.querySelector("#filterMenu");
 
+console.debug('Filter menu initialized');
+
 // FILTRO
 function filterByCategory(category) {
   if (category === "all") {
@@ -17,6 +19,7 @@ function filterByCategory(category) {
 
 // abrir/cerrar menú filtro
 filterBtn.addEventListener("click", () => {
+  console.debug('Filter menu toggled');
   filterMenu.classList.toggle("hidden");
 });
 
@@ -27,6 +30,7 @@ document.querySelectorAll("#filterMenu button").forEach(btn => {
 
     filterByCategory(category);
 
+    console.debug('Filter menu closed');
     filterMenu.classList.add("hidden");
   });
 });
