@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const form = document.getElementById("contactForm");
 
-  console.log("JS carregado"); // 👈 TESTE
+  console.log("JS carregado");
 
   if (!form) {
     console.error("Form not found");
@@ -21,9 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Email:", email);
     console.log("Message:", message);
 
-   alert("Message sent successfully!");
+    // ❌ opcional remover
+    // alert("Message sent successfully!");
 
-    form.reset();
+    // 🔥 REDIRECIONA PRA SUCCESS
+    window.location.href = "success.html";
 
   });
 
