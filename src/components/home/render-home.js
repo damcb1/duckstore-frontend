@@ -20,11 +20,43 @@ function updateMiniCart() {
   const cesta = getCesta();
 
   const total = cesta.reduce((acc, item) => {
-    return acc + (item.cantidad || 1);
+    const qty = Number(item.cantidad);
+    return acc + (qty > 0 ? qty : 1);
   }, 0);
 
   const counter = document.getElementById("cart-count");
   if (counter) counter.textContent = total;
+}
+
+/* =========================
+   ADD TO CART (NORMALIZADO)
+========================= */
+
+function addToCart(product) {
+  let cesta = getCesta();
+
+  const index = cesta.findIndex((item) => item.id === product.id);
+
+  if (index !== -1) {
+    cesta[index].cantidad = Number(cesta[index].cantidad || 1) + 1;
+  } else {
+    cesta.push({
+      id: product.id,
+
+      // 🔥 NORMALIZACIÓN ÚNICA DEL MODELO
+      nombre: product.name || product.nombre,
+      precio: Number(product.price ?? product.precio),
+      imagen: product.img || product.imagen,
+      categoria: product.series || product.categoria,
+
+      cantidad: 1
+    });
+  }
+
+  saveCesta(cesta);
+  updateMiniCart();
+
+  console.log("🛒 CESTA ACTUAL:", cesta);
 }
 
 /* =========================
@@ -44,12 +76,14 @@ function renderHomeProducts() {
   featuredProducts.forEach((product) => {
     const article = document.createElement("article");
 
-    // 🔥 IMPORTANTE: clase correcta para tu CSS
     article.classList.add("card", "card-secondary");
 
     article.innerHTML = `
       <div class="card-img-wrap">
-        <img src="${product.img}" alt="${product.alt}" class="card-img">
+        <img 
+          src="${product.img || product.image || '/assets/images/placeholder.png'}" 
+          alt="${product.name}" 
+          class="card-img">
       </div>
 
       <div class="card-body">
@@ -61,17 +95,9 @@ function renderHomeProducts() {
         </div>
 
         <div class="card-actions">
-
-          <div class="quantity-controls">
-            <button class="minus">-</button>
-            <span class="qty">1</span>
-            <button class="plus">+</button>
-          </div>
-
           <button class="add-btn" data-id="${product.id}">
-            Añadir producto
+            Añadir al carrito
           </button>
-
         </div>
       </div>
     `;
@@ -89,58 +115,14 @@ function initHomeEvents() {
   if (!container) return;
 
   container.addEventListener("click", (e) => {
-    const card = e.target.closest(".card");
-    if (!card) return;
+    if (!e.target.classList.contains("add-btn")) return;
 
-    const qtyEl = card.querySelector(".qty");
-    let qty = parseInt(qtyEl.textContent);
+    const id = Number(e.target.dataset.id);
+    const product = products.find((p) => p.id === id);
 
-    // ➕
-    if (e.target.classList.contains("plus")) {
-      qty++;
-      qtyEl.textContent = qty;
-    }
+    if (!product) return;
 
-    // ➖
-    if (e.target.classList.contains("minus")) {
-      if (qty > 1) {
-        qty--;
-        qtyEl.textContent = qty;
-      }
-    }
-
-    // 🛒 ADD TO CART
-    if (e.target.classList.contains("add-btn")) {
-      const id = Number(e.target.dataset.id);
-      const product = products.find((p) => p.id === id);
-      if (!product) return;
-
-      const quantity = Number(qtyEl.textContent);
-
-      let cesta = getCesta();
-
-      const index = cesta.findIndex((item) => item.id === id);
-
-      if (index !== -1) {
-        cesta[index].cantidad += quantity;
-      } else {
-        cesta.push({
-          id: product.id,
-          nombre: product.name,
-          precio: Number(product.price),
-          imagen: product.img,
-          categoria: product.series,
-          cantidad: quantity
-        });
-      }
-
-      saveCesta(cesta);
-      updateMiniCart();
-
-      console.log("🛒 CESTA:", cesta);
-
-      qtyEl.textContent = "1";
-    }
+    addToCart(product);
   });
 }
 

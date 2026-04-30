@@ -85,7 +85,7 @@ function renderCesta() {
 }
 
 // ==============================
-// EVENTS
+// EVENTS (OPTIMIZADO)
 // ==============================
 
 function attachEvents() {
@@ -104,7 +104,9 @@ function attachEvents() {
 
       if (action === "minus") {
         const current = Number(cesta[index].cantidad) || 1;
-        if (current > 1) cesta[index].cantidad = current - 1;
+        if (current > 1) {
+          cesta[index].cantidad = current - 1;
+        }
       }
 
       if (action === "delete") {

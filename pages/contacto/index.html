@@ -12,6 +12,13 @@
 
 <!-- HEADER -->
 <header id="header"></header>
+<script>
+  fetch('../../header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
 
 <div class="page-content">
   <div class="page">

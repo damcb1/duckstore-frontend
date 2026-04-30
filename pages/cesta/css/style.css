@@ -63,7 +63,7 @@ button:active {
 .cart-container {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 28px 18px 60px;
+  padding: 100px 18px 60px;
 }
 
 /* EYEBROW H1 */
@@ -333,6 +333,13 @@ button:active {
   transition: border-color 0.15s, color 0.15s;
 }
 
+.checkout-btn,
+.continue-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
 .continue-btn:hover {
   border-color: var(--gold);
   color: var(--gold-dark);
@@ -421,7 +428,7 @@ button:active {
 /* DESKTOP (1024px+) */
 @media (min-width: 1024px) {
   .cart-container {
-    padding: 40px 32px 80px;
+    padding: 80px 32px 80px;
   }
  
   .items-count {
