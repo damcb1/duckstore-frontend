@@ -6,11 +6,48 @@ import { products } from "../../data/products.js";
 const grid = document.querySelector("#product-grid");
 
 // ==============================
+// RENDER FEATURED
+// ==============================
+function renderFeatured() {
+  const featured = products.find(p => p.featured);
+  if (!featured) return;
+
+  const wrapper = document.querySelector("#featured-card");
+  if (!wrapper) return;
+
+  wrapper.innerHTML = `
+    <span class="card-badge">Limited Edition</span>
+    <div class="card-featured-info">
+      <h2 class="card-featured-name">${featured.name}</h2>
+      <p class="card-featured-desc">
+        24k Matte Finish Premium Collector's Piece.
+        A masterpiece of craftsmanship for the discerning enthusiast.
+      </p>
+      <div class="price-buy-wrapper">
+        <span class="card-featured-price">€${featured.price}.00</span>
+        <button class="buy-btn" data-id="${featured.id}">
+          Buy Golden Duck
+        </button>
+      </div>
+    </div>
+    <div class="card-featured-img-wrap">
+      <img src="${featured.img}" alt="${featured.alt}" class="card-img" />
+    </div>
+  `;
+
+  wrapper.querySelector(".buy-btn").addEventListener("click", () => {
+    addToCart(featured);
+    showAddedFeedback(wrapper.querySelector(".buy-btn"));
+  });
+}
+
+// ==============================
 // RENDER PRODUCTS
 // ==============================
 export function renderProducts(list) {
+  const normal = list.filter(p => !p.featured);
   grid.innerHTML = "";
-  list.forEach(product => {
+  normal.forEach(product => {
     grid.innerHTML += `
       <article class="card card-secondary ${product.className}">
         <div class="card-img-wrap">
@@ -29,7 +66,7 @@ export function renderProducts(list) {
       </article>
     `;
   });
-  attachAddToCartEvents(list);
+  attachAddToCartEvents(normal);
 }
 
 // ==============================
@@ -81,17 +118,14 @@ function showAddedFeedback(btn) {
 // ==============================
 function updateCartCounter() {
   const cesta = JSON.parse(localStorage.getItem("cesta")) || [];
-  const totalItems = cesta.reduce((acc, item) => {
-    return acc + (item.cantidad || 1);
-  }, 0);
+  const totalItems = cesta.reduce((acc, item) => acc + (item.cantidad || 1), 0);
   const counter = document.getElementById("cart-count");
-  if (counter) {
-    counter.textContent = totalItems;
-  }
+  if (counter) counter.textContent = totalItems;
 }
 
 // ==============================
 // INIT
 // ==============================
+renderFeatured();
 renderProducts(products);
 updateCartCounter();
