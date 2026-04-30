@@ -153,7 +153,7 @@ button:hover {
 }
 
 /* =========================
-   ICONS (FIX REAL)
+   ICONS
 ========================= */
 
 .icons {
@@ -183,7 +183,7 @@ button:hover {
   justify-content: center;
 }
 
-/* ícone dentro do círculo */
+/* ícones pequenos */
 .icon-circle img,
 .icon-circle svg {
   width: 16px;
@@ -199,16 +199,14 @@ button:hover {
 }
 
 /* =========================
-   ÍCONE GRANDE (HEADSET)
+   ICONE HEADSET (FIX)
 ========================= */
 
-/* 🔥 ESSA É A CORREÇÃO PRINCIPAL */
-.social img,
-.social svg {
-  width: 28px;
-  height: 28px;
-  display: block;
-  margin: 12px auto 0;
+.social p img {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
 }
 
 /* =========================

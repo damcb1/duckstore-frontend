@@ -288,4 +288,30 @@ body {
       font-size: 64px;
   }
 
+.buy-btn {
+  border: none;
+  outline: none;
+}
+
+.filter-menu button {
+  background: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3d3905;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.filter-menu button:hover {
+  background: #fffae1;
+}
+
+.card-featured-name {
+  margin-top: 4px;
+}
+
 }

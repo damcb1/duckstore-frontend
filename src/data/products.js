@@ -58,5 +58,16 @@ export const products = [
     img: "/assets/images/Bikini-duck.png", // ✅
     alt: "The Bikini Duck",
     className: ""
+  },
+  {
+  id: 7,
+  name: "Golden Ducky",
+  category: "limited",
+  series: "Limited Edition",
+  price: 124,
+  img: "/assets/images/Golden-rubber-duck.png",
+  alt: "Golden Duck",
+  className: "",
+  featured: true
   }
 ];
