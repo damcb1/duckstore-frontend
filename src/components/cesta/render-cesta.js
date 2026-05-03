@@ -3,7 +3,11 @@
 // ==============================
 
 function getCesta() {
-  return JSON.parse(localStorage.getItem("cesta")) || [];
+  try {
+    return JSON.parse(localStorage.getItem("cesta")) || [];
+  } catch {
+    return [];
+  }
 }
 
 function saveCesta(cesta) {
@@ -43,7 +47,12 @@ function renderCesta() {
   let subtotal = 0;
 
   cesta.forEach((item, index) => {
-    const price = Number(item.precio);
+    // 🔥 FALLBACKS SEGUROS
+    const name = item.nombre || item.name || "Producto";
+    const price = Number(item.precio ?? item.price ?? 0);
+    const image = item.imagen || item.img || "/assets/images/placeholder.png";
+    const category = item.categoria || item.category || "";
+
     const quantity = Number(item.cantidad) || 1;
 
     subtotal += price * quantity;
@@ -52,11 +61,11 @@ function renderCesta() {
     article.classList.add("cart-item");
 
     article.innerHTML = `
-      <img src="${item.imagen}" alt="${item.nombre}">
+      <img src="${image}" alt="${name}">
 
       <div class="item-body">
-        <h3>${item.nombre}</h3>
-        <p class="item-series">${item.categoria}</p>
+        <h3>${name}</h3>
+        <p class="item-series">${category}</p>
 
         <div class="quantity">
           <button class="qty-btn" data-action="minus" data-index="${index}">-</button>
