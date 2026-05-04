@@ -1,75 +1,73 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
-  <script src="/assets/js/navbar.js" defer></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-  </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Quack & Splash</title>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
-  <title>Quack & Splash</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/galeria.css">
-</head>
 
-<!-- HEADER--->
+  <!-- JS -->
+  <script src="/assets/js/navbar.js" defer></script>
+  <script type="module" src="../src/components/home/render-home.js"></script>
+</head>
 
 <body>
 
- <header id="header"></header>
-<header class="header">
- <!-- <button class="icon-btn">
-  <svg viewBox="0 0 24 24" class="icon">
-      <path d="M10 18a8 8 0 1 1 5.3-14.1A8 8 0 0 1 10 18zm11 3-6-6"/>
-    </svg>
-  </button>-->
+  <!-- HEADER DINÁMICO -->
+  <header id="header"></header>
 
-  <div class="header-left"></div>
+  <script>
+    fetch('/header.html') 
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
 
-  <div class="header-title plus-jakarta-sans-fonts-google">
-    Quack & Splash
-  </div>
+        // actualizar contador cuando el header ya está cargado
+        if (typeof actualizarContador === "function") {
+          actualizarContador();
+        }
+      });
+  </script>
 
-
-  <button class="icon-btn cart-btn">
-   <a href="/pages/cesta/"><img src="/assets/icons/carrito-header.png" alt="Cart" class="icon" /></a> 
-    <span id="cart-count">0</span>
-  </button>
-</header>
-
+  <!-- MAIN -->
   <main class="container">
 
+    <!-- HERO -->
     <section class="hero">
-     
-    <div class="hero-text">
+      <div class="hero-text">
+        <span class="badge">PREMIUM RUBBER DUCKS</span>
+        <h1>Elevate Your <br><span>Bath Time</span></h1>
+        <p class="hero-subtitle">
+          Discover the world's most sophisticated rubber duck collection.
+        </p>
 
-      <span class="badge">PREMIUM RUBBER DUCKS</span>
-      <h1>Elevate Your <br><span>Bath Time</span></h1>
-      <p class="hero-subtitle">
-        Discover the world's most sophisticated rubber duck collection.
-      </p>
-
-      <div class="buttons">
-        <a href="/pages/catalogo-productos/"  class="btn primary">Shop The Collection →</a>
-        <a href="#our-story" class="btn secondary">Our Story</a>
+        <div class="buttons">
+          <a href="/pages/catalogo-productos/" class="btn primary">Shop The Collection →</a>
+          <a href="#our-story" class="btn secondary">Our Story</a>
+        </div>
       </div>
-    </div>
 
       <div class="card">
-        <img src="../assets/images/Techy-duck.png" alt="Techy Duck">
+        <img src="/assets/images/Techy-duck.png" alt="Techy Duck">
       </div>
     </section>
 
+    <!-- MISSION -->
     <section class="mission" id="our-story">
       <p class="mission-subtitle">OUR PHILOSOPHY</p>
       <h2>The Quack Mission</h2>
+
       <div class="quote-box">
         <p>"We believe that a single moment of buoyancy can change your entire day."</p>
       </div>
@@ -82,6 +80,7 @@
             <p>Hand-selected for personality and quality.</p>
           </div>
         </div>
+
         <div class="feature">
           <div class="feature-icon-circle blue">💧</div>
           <div>
@@ -92,160 +91,41 @@
       </div>
     </section>
 
-      <!--MAIN: Galería de productos-->
-    <main class="gallery-page">
-      <!---- <section class="gallery-header">
-            <p class="gallery-header-label">Curated Collection</p>
-            <h1 class="gallery-header-title">The Duck <em>Gallery</em></h1>
-        </section>-->
+    <!-- PRODUCTOS DINÁMICOS -->
+    <section class="gallery-page">
+      <section class="product-grid" id="home-products"></section>
+    </section>
 
-    <!--PRODUCTS: Featured card
+  </main>
 
-        <article class="card card-featured">
-        <span class="card-badge">Limited Edition</span>
+  <!-- FOOTER / NAV -->
+  <nav class="bottom-nav">
 
-        <div class="card-featured-info">
-            <h2 class="card-featured-name">Golden Ducky</h2>
-            <p class="card-featured-desc">24k Matte Finish Premium Collector's Piece. A masterpiece of craftmanship for the discerning enthusiast.</p>
-            <p class="card-featured-price">€124.00</p>
-        </div>
+    <button class="tab active">
+      <a href="/home/content.html">
+        <img src="/assets/icons/home.svg" alt="home">
+      </a>
+    </button>
 
-        <div class="card-featured-img-wrap">
-            <img src="../../assets/images/Golden-rubber-duck.png" alt="Golden Ducky - edición limitada" class="card-img"/>
-        </div>
-        </article>-->
+    <button class="tab">
+      <a href="/pages/catalogo-productos/">
+        <img src="/assets/icons/shop.svg" alt="shop">
+      </a>
+    </button>
 
-         <!--<section class="product-grid">
-        
-       ----------------PRODUCTS: Card 1
+    <button class="tab">
+      <a href="/pages/contacto/">
+        <img src="/assets/icons/contacto.svg" alt="contacto">
+      </a>
+    </button>
 
-            <article class="card card-secondary">
-                <div class="card-img-wrap">
-                    <img src="../../assets/images/Sailor-duck.png" alt="The Sailor Duck" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-name">The Sailor Duck</h3>
+    <button class="tab">
+      <a href="/pages/cesta/">
+        <img src="/assets/icons/carrito-footer.svg" alt="carrito">
+      </a>
+    </button>
 
-                    <div class="card-footer">
-                        <p class="card-series">Voyager Series</p>
-                        <span class="card-price">€40</span>
-                    </div>
-                </div>
-            </article>
--->
-        <!--PRODUCTS: Card 2
-
-            <article class="card card-secondary card-alt">
-                <div class="card-img-wrap">
-                    <img src="../../assets/images/Artist-duck.png" alt="The Boutique Artist Duck" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-name">The Boutique Artist</h3>
-
-                    <div class="card-footer">
-                        <p class="card-series">Creative Series</p>
-                        <span class="card-price">€45</span>
-                    </div>
-                    
-                </div>
-            </article>-->
-        
-        <!--PRODUCTS: Card 3
-
-            <article class="card card-secondary card-yellow">
-                <div class="card-img-wrap">
-                    <img src="../../assets/images/Techy-duck.png" alt="The Techy Duck" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-name">The Techy Duck</h3>
-
-                    <div class="card-footer">
-                        <p class="card-series">Amazing Series</p>
-                        <span class="card-price">€38</span>
-                    </div>
-                    
-                </div>
-            </article>-->
-
-        <!--PRODUCTS: Card 4-->
-<section class="product-grid">
-
-            <article class="card card-secondary">
-                <div class="card-img-wrap">
-                    <img src="../../assets/images/Admiral-duck.png" alt="The Admiral Duck" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-name">The Admiral Duck</h3>
-
-                    <div class="card-footer">
-                        <p class="card-series">Voyager Series</p>
-                        <span class="card-price">€32</span>
-                    </div>
-                    
-                </div>
-            </article>
-
-        <!--PRODUCTS: Card 5-->
-            
-            <article class="card card-secondary card-yellow">
-                <div class="card-img-wrap">
-                    <img src="../../assets/images/Party-duck.png" alt="The Party Duck" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-name">The Party Duck</h3>
-
-                    <div class="card-footer">
-                        <p class="card-series">Amazing Series</p>
-                        <span class="card-price">€32</span>
-                    </div>
-                    
-                </div>
-            </article>
-
-        <!--PRODUCTS: Card 6-->
-            
-            <article class="card card-secondary card-yellow">
-                <div class="card-img-wrap">
-                    <img src="../../assets/images/Bikini-duck.png" alt="The Bikini Duck" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-name">The Bikini Duck</h3>
-
-                    <div class="card-footer">
-                        <p class="card-series">Voyager Series</p>
-                        <span class="card-price">€32</span>
-                    </div>
-                    
-                </div>
-            </article>
-
-        </section>
-
-    </main>
-    <!---   INICIO FOOTER ---->
-   <nav class="bottom-nav">
-
-  <button class="tab active">
-    <a href="/home/content.html">
-    <img src="/assets/icons/home.svg" alt="home"></a>
-  </button>
-
-  <button class="tab"><a href="/pages/catalogo-productos/">
-    <img src="/assets/icons/shop.svg" alt="shop"></a>
-  </button>
-
-  <button class="tab"><a href="/pages/contacto/">
-    <img src="/assets/icons/contacto.svg" alt="contacto"></a>
-  </button>
-   <button class="tab"><a href="/pages/cesta/">
-    <img src="/assets/icons/carrito-footer.svg" alt="contacto"></a>
-  </button>
-
-</nav>
-    <!---TERMINA EL FOOTER ---->
-
-
+  </nav>
 
 </body>
-
 </html>

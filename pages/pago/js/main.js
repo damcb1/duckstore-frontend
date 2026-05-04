@@ -10,39 +10,51 @@ fetch('./data/payment.json')
   })
   .then(data => {
 
+    // 🔥 Métodos de pago
     renderMethods(data.methods);
-    renderSummary(data.cart);
+
+    // 🔥 Resumen desde localStorage
+    renderSummary();
+
+    // =========================
+    // BOTÓN DE PAGO
+    // =========================
 
     const payBtn = document.getElementById("payBtn");
 
-    payBtn.onclick = () => {
+    if (payBtn) {
+      payBtn.onclick = () => {
 
-      const selectedMethod = getSelectedMethod();
+        console.log("CLICK PAGO");
 
-      if (!selectedMethod) {
-        alert("Selecciona un método de pago");
-        return;
-      }
+        const selectedMethod = getSelectedMethod();
 
-      // 💳 CARD
-      if (selectedMethod === "card") {
-        alert("Pago con tarjeta 💳");
-      }
+        if (!selectedMethod) {
+          alert("Selecciona un método de pago");
+          return;
+        }
 
-      // 💰 PAYPAL
-      else if (selectedMethod === "paypal") {
-        alert("Pago con PayPal 💰");
-      }
+        // 🔥 REDIRECCIÓN SEGURA (sin alert)
+        const goToSummary = () => {
+          setTimeout(() => {
+            window.location.href = "/pages/resumen-cesta/index.html";
+          }, 100);
+        };
 
-      // 🍎 APPLE PAY
-      else if (selectedMethod === "apple") {
-        alert("Pago con Apple Pay 🍎");
-      }
-
-      // 🔥 TODOS redirecionam
-      window.location.href = "../resumen-cesta/index.html";
-
-    };
+        if (selectedMethod === "card") {
+          console.log("Pago con tarjeta 💳");
+          goToSummary();
+        } 
+        else if (selectedMethod === "paypal") {
+          console.log("Pago con PayPal 💰");
+          goToSummary();
+        } 
+        else if (selectedMethod === "apple") {
+          console.log("Pago con Apple Pay 🍎");
+          goToSummary();
+        }
+      };
+    }
 
   })
   .catch(err => {
