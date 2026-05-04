@@ -3,11 +3,7 @@
 // ==============================
 
 function getCesta() {
-  try {
-    return JSON.parse(localStorage.getItem("cesta")) || [];
-  } catch {
-    return [];
-  }
+  return JSON.parse(localStorage.getItem("cesta")) || [];
 }
 
 function saveCesta(cesta) {
@@ -47,12 +43,7 @@ function renderCesta() {
   let subtotal = 0;
 
   cesta.forEach((item, index) => {
-    // 🔥 FALLBACKS SEGUROS
-    const name = item.nombre || item.name || "Producto";
-    const price = Number(item.precio ?? item.price ?? 0);
-    const image = item.imagen || item.img || "/assets/images/placeholder.png";
-    const category = item.categoria || item.category || "";
-
+    const price = Number(item.precio);
     const quantity = Number(item.cantidad) || 1;
 
     subtotal += price * quantity;
@@ -61,11 +52,11 @@ function renderCesta() {
     article.classList.add("cart-item");
 
     article.innerHTML = `
-      <img src="${image}" alt="${name}">
+      <img src="${item.imagen}" alt="${item.nombre}">
 
       <div class="item-body">
-        <h3>${name}</h3>
-        <p class="item-series">${category}</p>
+        <h3>${item.nombre}</h3>
+        <p class="item-series">${item.categoria}</p>
 
         <div class="quantity">
           <button class="qty-btn" data-action="minus" data-index="${index}">-</button>
@@ -74,6 +65,7 @@ function renderCesta() {
           <button class="delete-btn" data-action="delete" data-index="${index}">🗑</button>
         </div>
       </div>
+
       <div class="item-price">
         €${(price * quantity).toFixed(2)}
       </div>
@@ -93,7 +85,7 @@ function renderCesta() {
 }
 
 // ==============================
-// EVENTS
+// EVENTS (OPTIMIZADO)
 // ==============================
 
 function attachEvents() {
@@ -112,7 +104,9 @@ function attachEvents() {
 
       if (action === "minus") {
         const current = Number(cesta[index].cantidad) || 1;
-        if (current > 1) cesta[index].cantidad = current - 1;
+        if (current > 1) {
+          cesta[index].cantidad = current - 1;
+        }
       }
 
       if (action === "delete") {

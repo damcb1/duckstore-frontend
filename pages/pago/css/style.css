@@ -1,4 +1,5 @@
 /* =========================
+<<<<<<< HEAD
    BASE
 ========================= */
 * {
@@ -7,12 +8,27 @@
 
 body {
   margin: 0;
+=======
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+>>>>>>> develop
   font-family: Arial, sans-serif;
   background: #f7f6f3;
   color: #333;
 }
 
 /* =========================
+<<<<<<< HEAD
    HEADER
 ========================= */
 .app-header {
@@ -33,6 +49,73 @@ body {
   max-width: 360px;
   margin: auto;
   padding: 0 15px 20px;
+=======
+   HEADER (FIX + CENTRAL)
+========================= */
+.header {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100% - 32px);
+  max-width: 1100px; /* 🔥 igual ao layout da home */
+
+  background: white;
+  padding: 14px 22px;
+
+  border-radius: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+
+  z-index: 999;
+}
+
+/* =========================
+   LOGO
+.logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  color: #7a5c00;
+  font-size: 16px;
+}
+
+/* =========================
+   CART
+.cart-btn {
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+  color: #7a5c00;
+}
+
+#cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+
+  background: #ff6b6b;
+  color: white;
+
+  font-size: 10px;
+  font-weight: bold;
+
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* =========================
+   PAGE (🔥 CORREÇÃO AQUI)
+========================= */
+.page {
+  max-width: 360px;
+  margin: 110px auto 0; /* 🔥 resolve sobreposição */
+  padding: 0 15px 80px;
+>>>>>>> develop
 }
 
 /* =========================
@@ -53,8 +136,7 @@ h2 {
 ========================= */
 .payment-card {
   width: 100%;
-  max-width: 100%;
-  margin: 0 auto 25px;
+  margin-bottom: 25px;
   padding: 16px;
   border: 2px solid #e6c200;
   border-radius: 22px;
@@ -62,20 +144,101 @@ h2 {
 }
 
 /* =========================
-   CARD HEADER
+   HEADER CORRETO
 ========================= */
-.card-header {
+.header {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100% - 30px);
+  max-width: 420px;
+
+  background: white;
+  padding: 14px 20px;
+
+  border-radius: 30px;
+
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
+  justify-content: space-between;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+  z-index: 999;
 }
 
-.card-header h3 {
-  font-size: 16px;
-  font-weight: 600;
+/* 🔥 CRUCIAL: cria 3 zonas iguais */
+.header::before {
+  content: "";
+  width: 24px; /* espaço igual ao ícone */
 }
 
+/* título central real */
+.header-title {
+  text-align: center;
+  flex: 1;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* carrinho */
+.cart-btn {
+  width: 24px;
+  position: relative;
+}
+
+.cart-btn img {
+  width: 18px;
+}
+
+/* contador */
+#cart-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+
+  background: #ff6b6b;
+  color: white;
+
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* título centralizado */
+.header-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* carrinho */
+.cart-btn {
+  margin-left: auto;
+  position: relative;
+}
+
+.cart-btn img {
+  width: 18px;
+}
+
+/* contador */
+#cart-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+
+  background: #ff6b6b;
+  color: white;
+
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
 /* =========================
    RADIO
 ========================= */
@@ -100,10 +263,9 @@ h2 {
 
 .field label {
   font-size: 11px;
-  letter-spacing: 0.5px;
   color: #7a7a7a;
-  display: block;
   margin-bottom: 5px;
+  display: block;
 }
 
 .field input {
@@ -113,7 +275,6 @@ h2 {
   border: none;
   background: #f3e4b5;
   font-size: 14px;
-  outline: none;
 }
 
 /* =========================
@@ -121,31 +282,28 @@ h2 {
 ========================= */
 .row {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
 .row .field {
   flex: 1;
-  min-width: 0; /* 👈 evita quebrar layout */
 }
 
 /* =========================
-   OPTIONS (PayPal / Apple)
+   OPTIONS
 ========================= */
 .payment-option {
-  width: 100%;
-  margin: 0 auto 12px;
+  margin-bottom: 12px;
   padding: 14px;
   border-radius: 18px;
   background: #f3e4b5;
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 500;
 }
 
 /* =========================
-   SUMMARY
+   SUMMARY CONTAINER
 ========================= */
 #summary {
   background: white;
@@ -156,7 +314,7 @@ h2 {
 }
 
 /* =========================
-   SUMMARY ITEM
+   SUMMARY ITEM (IMPORTANTE)
 ========================= */
 .summary-item {
   display: flex;
@@ -165,12 +323,34 @@ h2 {
   margin-bottom: 15px;
 }
 
+/* imagen del producto */
 .summary-item img {
-  width: 55px;
-  height: 55px;
-  border-radius: 12px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
 }
 
+/* bloque texto */
+.summary-item div {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+/* nombre */
+.summary-item p:first-child {
+  font-weight: 600;
+  margin: 0;
+}
+
+/* cantidad */
+.summary-item p:last-child {
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+}
+
+/* 💰 PRECIO A LA DERECHA (CLAVE CSS) */
 .summary-item span {
   margin-left: auto;
   font-weight: 600;
@@ -180,11 +360,17 @@ h2 {
    TOTAL
 ========================= */
 .total {
-  margin-top: 15px;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.total p {
+  margin: 5px 0;
 }
 
 .total h3 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* =========================
@@ -196,15 +382,20 @@ button {
   background: linear-gradient(to right, #cfa700, #f5d000);
   border: none;
   border-radius: 30px;
-  font-size: 16px;
+  font-size: 15px;
   color: white;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 15px;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
 }
 
 /* =========================
-   FOOTER NAV
+   FOOTER
 ========================= */
 #footer {
   position: fixed;
@@ -216,39 +407,25 @@ button {
 }
 
 /* =========================
-   MOBILE
+   DESKTOP
 ========================= */
-@media (max-width: 500px) {
-  .page {
-    padding: 0 15px 20px;
-  }
-}
-/* DESKTOP */
 @media (min-width: 1024px) {
 
   .page {
     max-width: 1100px;
-    margin: 0 auto;
   }
 
   .layout {
     display: grid;
     grid-template-columns: 1fr 400px;
     gap: 40px;
-    align-items: start;
-  }
-
-  .payment-section {
-    grid-column: 1;
   }
 
   .summary-section {
-    grid-column: 2;
     position: sticky;
-    top: 100px;
+    top: 120px;
   }
 
-  /* esconder bottom nav */
   .bottom-nav {
     display: none;
   }
