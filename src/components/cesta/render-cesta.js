@@ -74,6 +74,7 @@ function renderCesta() {
           <button class="delete-btn" data-action="delete" data-index="${index}">🗑</button>
         </div>
       </div>
+
       <div class="item-price">
         €${(price * quantity).toFixed(2)}
       </div>

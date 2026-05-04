@@ -117,7 +117,6 @@ button {
   border: none;
   background: linear-gradient(90deg, #776300, #FFD709);
   color: white;
-
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
@@ -172,6 +171,7 @@ button:hover {
   text-decoration: none;
 }
 
+/* círculo */
 .icon-circle {
   width: 36px;
   height: 36px;
@@ -191,6 +191,7 @@ button:hover {
   object-fit: contain;
 }
 
+/* texto */
 .icon-item span {
   font-size: 10px;
   letter-spacing: 1px;

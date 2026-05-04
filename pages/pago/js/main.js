@@ -10,41 +10,6 @@ fetch('./data/payment.json')
   })
   .then(data => {
 
-<<<<<<< HEAD
-    renderMethods(data.methods);
-    renderSummary(data.cart);
-
-    const payBtn = document.getElementById("payBtn");
-
-    payBtn.onclick = () => {
-
-      const selectedMethod = getSelectedMethod();
-
-      if (!selectedMethod) {
-        alert("Selecciona un método de pago");
-        return;
-      }
-
-      // 💳 CARD
-      if (selectedMethod === "card") {
-        alert("Pago con tarjeta 💳");
-      }
-
-      // 💰 PAYPAL
-      else if (selectedMethod === "paypal") {
-        alert("Pago con PayPal 💰");
-      }
-
-      // 🍎 APPLE PAY
-      else if (selectedMethod === "apple") {
-        alert("Pago con Apple Pay 🍎");
-      }
-
-      // 🔥 TODOS redirecionam
-      window.location.href = "../resumen-cesta/index.html";
-
-    };
-=======
     // 🔥 Métodos de pago
     renderMethods(data.methods);
 
@@ -90,7 +55,6 @@ fetch('./data/payment.json')
         }
       };
     }
->>>>>>> develop
 
   })
   .catch(err => {
