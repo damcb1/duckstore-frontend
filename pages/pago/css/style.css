@@ -44,7 +44,6 @@ body {
 
 /* =========================
    LOGO
-========================= */
 .logo {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
@@ -54,7 +53,6 @@ body {
 
 /* =========================
    CART
-========================= */
 .cart-btn {
   position: relative;
   text-decoration: none;
@@ -271,7 +269,7 @@ h2 {
 }
 
 /* =========================
-   SUMMARY
+   SUMMARY CONTAINER
 ========================= */
 #summary {
   background: white;
@@ -282,7 +280,7 @@ h2 {
 }
 
 /* =========================
-   SUMMARY ITEM
+   SUMMARY ITEM (IMPORTANTE)
 ========================= */
 .summary-item {
   display: flex;
@@ -291,12 +289,34 @@ h2 {
   margin-bottom: 15px;
 }
 
+/* imagen del producto */
 .summary-item img {
   width: 50px;
   height: 50px;
   border-radius: 10px;
 }
 
+/* bloque texto */
+.summary-item div {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+/* nombre */
+.summary-item p:first-child {
+  font-weight: 600;
+  margin: 0;
+}
+
+/* cantidad */
+.summary-item p:last-child {
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+}
+
+/* 💰 PRECIO A LA DERECHA (CLAVE CSS) */
 .summary-item span {
   margin-left: auto;
   font-weight: 600;
@@ -306,7 +326,13 @@ h2 {
    TOTAL
 ========================= */
 .total {
-  margin-top: 15px;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.total p {
+  margin: 5px 0;
 }
 
 .total h3 {
@@ -335,7 +361,7 @@ button:hover {
 }
 
 /* =========================
-   FOOTER NAV
+   FOOTER
 ========================= */
 #footer {
   position: fixed;

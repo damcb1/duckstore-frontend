@@ -117,10 +117,16 @@ span {
   border: none;
   cursor: pointer;
   display: inline-block;
+  text-decoration: none; /* 👈 esto quita el subrayado */
+}
+.btn a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .btn:hover {
   background: #d9e8ff;
+   text-decoration: none;
 }
 
 /* PRODUCT IMAGE */
@@ -132,7 +138,7 @@ span {
 
 .product-image img {
   width: 100%;
-  max-width: 180px;
+  max-width: 380px;
   border-radius: 20px;
 }
 
