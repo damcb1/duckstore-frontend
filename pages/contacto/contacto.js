@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  console.log("🟢 Contact JS loaded");
+
   const form = document.getElementById("contactForm");
 
-  console.log("JS carregado");
-
   if (!form) {
-    console.error("Form not found");
+    console.error("❌ Form not found");
     return;
   }
 
-  form.addEventListener("submit", function(event) {
+  form.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
@@ -17,15 +17,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
 
+    // ✅ LOG PRINCIPAL (REQUISITO)
+    console.log("🦆 MESSAGE SENT");
     console.log("Name:", name);
     console.log("Email:", email);
     console.log("Message:", message);
 
-    // ❌ opcional remover
-    // alert("Message sent successfully!");
+    // ✅ FEEDBACK VISUAL 
+    alert("Message sent! Check the console 🦆");
 
-    // 🔥 REDIRECIONA PRA SUCCESS
-    window.location.href = "success.html";
+    // opcional: limpar
+    form.reset();
 
   });
 
